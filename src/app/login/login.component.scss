@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .contenido{
+    margin: 0px;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formulario{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }

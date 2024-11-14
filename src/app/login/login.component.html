@@ -1,0 +1,25 @@
+<div class="contenido">
+
+    <mat-toolbar>
+        <span>My Application</span>
+    </mat-toolbar>
+
+
+    <form [formGroup]="options" class="form-content" >
+        <div class="example-form-fields" class="formulario">
+            <mat-form-field [floatLabel]="getFloatLabelValue()">
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="Usuario" autocomplete="off">
+            </mat-form-field>
+
+
+            <mat-form-field [floatLabel]="getFloatLabelValue()">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" placeholder="Contraseña" autocomplete="off">
+            </mat-form-field>
+
+            <button mat-stroked-button color="primary">Iniciar Sesión</button>
+        </div>
+    </form>
+
+</div>
