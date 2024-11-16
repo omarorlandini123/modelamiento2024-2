@@ -1,0 +1,114 @@
+/* Contenedor principal */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Encabezado */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f1f6;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Contenedor para el ícono de menú y el título */
+  .menu-icon, h2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Ajuste para que el texto esté al lado de las tres rayas */
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* Tamaño de los íconos */
+  /* Elimina el borde y el fondo del botón de menú */
+.menu-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Ajusta el tamaño de la imagen del icono */
+  .menu-icon img {
+    width: 24px;
+    height: 24px;
+    display: block; /* Para eliminar espacios adicionales en el botón */
+  }
+  
+  .user-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Alineación del ícono de usuario */
+  .user-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Sección de Mensaje y de Seguimiento */
+  .message-section,
+  .tracking-section {
+    margin-top: 20px;
+  }
+  
+  .message-title,
+  .tracking-title {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .message-box,
+  .tracking-box {
+    background-color: #e5dbe3;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Botones de acciones */
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .share-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+  }
+  
+  .share-button img {
+    width: 42px;
+    height: 32px;
+  }
+  
+  .accept-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
