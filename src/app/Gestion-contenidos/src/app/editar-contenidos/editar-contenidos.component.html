@@ -1,0 +1,65 @@
+<div class="fullscreen-container">
+    <h2>Editar contenido</h2>
+  
+    <div class="form-content">
+      <!-- Botón para Añadir Imagen -->
+      <div class="image-section">
+        <input type="file" #fileInput (change)="onImageSelected($event)" accept="image/*" hidden />
+        <button mat-fab color="primary" (click)="fileInput.click()" aria-label="Añadir imagen">
+          <mat-icon>add</mat-icon>
+        </button>
+        <img *ngIf="imagePreview" [src]="imagePreview" alt="Vista previa de la imagen" class="content-image">
+      </div>
+  
+      <!-- Formulario -->
+      <div class="form-section">
+        <!-- Campo de Nombre -->
+        <mat-form-field class="example-form-field">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Seguridad para el hogar" formControlName="nombre">
+          <button matSuffix mat-icon-button aria-label="Clear" *ngIf="contenidoForm.get('nombre')?.value" (click)="contenidoForm.get('nombre')?.setValue('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <!-- Campo de Dirigido a -->
+        <mat-form-field class="example-form-field">
+          <mat-label>Dirigido a</mat-label>
+          <input matInput placeholder="YouTube" formControlName="dirigidoA">
+          <button matSuffix mat-icon-button aria-label="Clear" *ngIf="contenidoForm.get('dirigidoA')?.value" (click)="contenidoForm.get('dirigidoA')?.setValue('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <!-- Campo de Fecha a Publicar -->
+        <mat-form-field class="example-form-field">
+          <mat-label>Fecha a publicar</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="19/11/2022" formControlName="fecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+  
+        <!-- Campo de Estado -->
+        <mat-form-field class="example-form-field">
+          <mat-label>Por publicar</mat-label>
+          <mat-select formControlName="estado">
+            <mat-option value="por-publicar">Por publicar</mat-option>
+            <mat-option value="publicado">Publicado</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <!-- Campo de Descripción -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Descripción</mat-label>
+          <textarea matInput placeholder="Video publicitario para la seguridad del hogar dirigido a Youtube" formControlName="descripcion"></textarea>
+        </mat-form-field>
+  
+        <!-- Botones de Guardar y Cancelar -->
+        <div class="button-group">
+          <button mat-flat-button color="primary" (click)="onSave()">Guardar</button>
+          <button mat-flat-button color="accent" (click)="onCancel()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
