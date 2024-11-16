@@ -1,0 +1,71 @@
+<div class="gestion-transacciones-container">
+    <mat-card class="header-card">
+      <mat-card-header>
+        <h2>Gestión de Transacciones Financieras</h2>
+        <mat-divider></mat-divider>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <!-- Información del proyecto -->
+        <div class="proyecto-info">
+          <strong>Proyecto:</strong> {{ nombreProyecto }}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Listado de transacciones -->
+    <div *ngFor="let transaccion of transacciones; let i = index" class="transaccion-card">
+      <mat-card class="transaccion-card-body">
+        <mat-card-header>
+          <div class="transaccion-header">
+            <mat-icon>attach_money</mat-icon> <!-- Icono de dinero -->
+            <h3>Transacción #{{ i + 1 }}</h3>
+          </div>
+        </mat-card-header>
+  
+        <mat-card-content>
+          <div class="transaccion-details">
+            <div><strong>Monto:</strong> ${{ transaccion.monto }}</div>
+  
+            <div>
+              <strong>Categoría:</strong>
+              <mat-select [(value)]="transaccion.categoria" class="dropdown">
+                <mat-option value="Ingreso">Ingreso</mat-option>
+                <mat-option value="Gasto">Gasto</mat-option>
+              </mat-select>
+            </div>
+  
+            <div><strong>Descripción:</strong> {{ transaccion.descripcion }}</div>
+  
+            <div><strong>Fecha:</strong> {{ transaccion.fecha | date }}</div>
+  
+            <div>
+              <strong>Estado:</strong>
+              <mat-select [(value)]="transaccion.estado" class="dropdown">
+                <mat-option value="Pendiente">Pendiente</mat-option>
+                <mat-option value="Aprobado">Aprobado</mat-option>
+                <mat-option value="Rechazado">Rechazado</mat-option>
+              </mat-select>
+            </div>
+          </div>
+  
+          <div class="transaccion-actions">
+            <button mat-raised-button color="primary" (click)="aprobarTransaccion(transaccion)">
+              <mat-icon>check_circle</mat-icon> Aprobar
+            </button>
+            <button mat-raised-button color="warn" (click)="rechazarTransaccion(transaccion)">
+              <mat-icon>cancel</mat-icon> Rechazar
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <!-- Botón para ver transacciones anteriores -->
+    <div class="ver-detalles">
+      <button mat-raised-button color="accent" (click)="verTransaccionesAnteriores()">
+        <mat-icon>history</mat-icon> Ver Detalles de Transacciones Anteriores
+      </button>
+    </div>
+  </div>
+  

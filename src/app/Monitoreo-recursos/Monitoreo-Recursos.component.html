@@ -1,0 +1,32 @@
+<div class="monitoreo-recursos-container">
+  <mat-card class="header-card">
+    <h2>Monitoreo de Recursos</h2>
+  </mat-card>
+
+  <mat-card *ngFor="let recurso of recursos" class="recurso-card">
+    <div class="recurso-header">
+      <mat-icon>storage</mat-icon>
+      <span>{{ recurso.tipo }}: {{ recurso.descripcion }}</span>
+    </div>
+
+    <div class="recurso-details">
+      <div><strong>Cantidad Solicitada:</strong> {{ recurso.cantidadSolicitada }}</div>
+      <div><strong>Cantidad Disponible:</strong> {{ recurso.cantidadDisponible }}</div>
+      <div><strong>Estado:</strong> {{ recurso.estado }}</div>
+    </div>
+
+    <div class="recurso-actions">
+      <button mat-raised-button color="primary" (click)="asignarRecurso(recurso)">
+        Asignar Recurso
+      </button>
+      <button mat-raised-button color="accent" (click)="verHistorial(recurso)">
+        Ver Historial de Uso
+      </button>
+    </div>
+  </mat-card>
+
+  <!-- Botón para ver historial general -->
+  <div class="ver-historial-general">
+    <button mat-raised-button color="warn" (click)="verHistorialGeneral()">Ver Historial General</button>
+  </div>
+</div>
