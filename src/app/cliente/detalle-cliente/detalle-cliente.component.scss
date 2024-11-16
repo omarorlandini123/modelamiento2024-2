@@ -1,0 +1,73 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .card {
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 16px;
+  }
+  
+
+  .avatar {
+    background-color: #e1bee7;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: auto;
+  }
+  
+  
+  .info-section {
+    margin-top: 20px;
+  
+    h3 {
+      font-size: 16px;
+      color: #757575;
+    }
+  
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  mat-divider {
+    background-color: #e0e0e0; /* Cambia el color si es necesario */
+  }
+  
+  .button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Ajusta según necesites */
+  }
+  
+  .button-right button,
+.button-center button {
+  background-color: #f3e5f5; /* Fondo claro */
+  color: #6a1b9a; /* Color de texto */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 8px 16px; /* Espaciado interno */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.button-right button:hover,
+.button-center button:hover {
+  background-color: #e1bee7; /* Cambia el color al pasar el mouse */
+}
