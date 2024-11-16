@@ -1,0 +1,90 @@
+
+<h1>Control de Calidad</h1>
+<form class="example-form">
+  <!-- DATOS DEL EMPLEADO -->
+  <div class="section">
+    <h2>Datos del Empleado</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Ingrese el nombre del empleado" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>ID del Empleado</mat-label>
+      <input matInput placeholder="Ingrese el ID del empleado" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Departamento</mat-label>
+      <input matInput placeholder="Ingrese el departamento" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Fecha</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <!-- DATOS DEL EVALUADOR -->
+  <div class="section">
+    <h2>Datos del Evaluador</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Ingrese el nombre del evaluador" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>ID del Evaluador</mat-label>
+      <input matInput placeholder="Ingrese el ID del evaluador" />
+    </mat-form-field>
+  </div>
+
+  <!-- EVALUACIONES -->
+  <div class="section">
+    <h2>Evaluaciones</h2>
+    <div class="evaluation">
+      <mat-form-field class="small-width">
+        <mat-label>1-5</mat-label>
+        <input matInput type="number" min="1" max="5" />
+      </mat-form-field>
+      <label>Puntualidad</label>
+    </div>
+
+    <div class="evaluation">
+      <mat-form-field class="small-width">
+        <mat-label>1-5</mat-label>
+        <input matInput type="number" min="1" max="5" />
+      </mat-form-field>
+      <label>Trabajo en Equipo</label>
+    </div>
+
+    <div class="evaluation">
+      <mat-form-field class="small-width">
+        <mat-label>1-5</mat-label>
+        <input matInput type="number" min="1" max="5" />
+      </mat-form-field>
+      <label>Calidad de Entregables</label>
+    </div>
+
+    <div class="evaluation">
+      <mat-form-field class="small-width">
+        <mat-label>1-5</mat-label>
+        <input matInput type="number" min="1" max="5" />
+      </mat-form-field>
+      <label>Cumplimiento de Objetivos</label>
+    </div>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div class="section">
+    <h2>Feedback</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Comentarios</mat-label>
+      <textarea matInput placeholder="Ingrese comentarios"></textarea>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary">Guardar</button>
+</form>
