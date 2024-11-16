@@ -1,0 +1,123 @@
+.payment-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: left;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 1.25em;
+  }
+  
+  .payment-method {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .payment-method label {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 16px;
+  }
+  
+  .card-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+  }
+  
+  .card-icons img {
+    height: 24px;
+    width: auto;
+  }
+  
+  .card-info label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .card-info input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .date-cvc {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .date, .cvc {
+    flex: 1;
+  }
+  
+  .save-card, .save-info, .accept-terms {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .amount {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+  
+  .amount span {
+    margin-left: 5px;
+  }
+  
+  .pay-button {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .pay-button:hover {
+    background-color: #333;
+  }
+  
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  label {
+    cursor: pointer;
+    color: #555;
+  }
+  

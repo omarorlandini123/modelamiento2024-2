@@ -1,0 +1,68 @@
+<div class="payment-container">
+    <h2>Pago de Envío</h2>
+  
+    <!-- Opción de pago con tarjeta -->
+    <div class="payment-method">
+      <input type="radio" id="creditCard" name="paymentMethod" checked />
+      <label for="creditCard">Tarjeta de crédito/débito</label>
+      <div class="card-icons">
+        <img src="https://stakeholders.com.pe/wp-content/uploads/2020/03/dc-1024x576.jpg" alt="Diners Club" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/640px-American_Express_logo_%282018%29.svg.png" alt="American Express" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-OIW8WjQU-Vu8Lmcfj5RgPa43YKkPvqA_aw&s" alt="MasterCard" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQky9twH42k2Mlc-tHdwNnICi1YBhPa0Ofnpw&s" alt="Visa" />
+      </div>
+    </div>
+  
+    <!-- Formulario para la información de la tarjeta -->
+    <div class="card-info">
+      <label for="cardName">Nombre en la tarjeta</label>
+      <input id="cardName" type="text" placeholder="Nombre en la tarjeta" />
+  
+      <label for="cardNumber">Número de la tarjeta</label>
+      <input id="cardNumber" type="text" placeholder="**** **** **** ****" />
+  
+      <div class="date-cvc">
+        <div class="date">
+          <label for="birthDate">Fecha de Expiración</label>
+          <input id="birthDate" type="date" />
+        </div>
+        <div class="cvc">
+          <label for="cvc">CVC/CVV</label>
+          <input id="cvc" type="password" placeholder="***" />
+        </div>
+      </div>
+  
+      <div class="save-card">
+        <input type="checkbox" id="saveCard" />
+        <label for="saveCard">Guardar tarjeta</label>
+      </div>
+    </div>
+  
+    <!-- Opción de pago con PayPal -->
+    <div class="payment-method">
+      <input type="radio" id="paypal" name="paymentMethod" />
+      <label for="paypal">PayPal</label>
+    </div>
+  
+    <!-- Guardar información para futuras compras -->
+    <div class="save-info">
+      <input type="checkbox" id="saveInfo" />
+      <label for="saveInfo">Guardar la información para una próxima compra</label>
+    </div>
+  
+    <!-- Monto a pagar -->
+    <div class="amount">
+      <label>Monto:</label>
+      <span>S/. 00.00</span>
+    </div>
+  
+    <!-- Aceptar términos y condiciones -->
+    <div class="accept-terms">
+      <input type="checkbox" id="acceptTerms" />
+      <label for="acceptTerms">He leído y acepto la Política de Privacidad</label>
+    </div>
+  
+    <!-- Botón de pago -->
+    <button class="pay-button">Pagar ahora</button>
+  </div>
+  
