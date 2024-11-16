@@ -7,7 +7,7 @@ import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.co
 import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.component';
 import { PagoEnvioComponent } from './pago-envio/pago-envio.component';
 import { GenerarInformeContableComponent } from './generar-informe-contable/generar-informe-contable.component';
-
+import { GenerarInformeContableShowComponent } from './generar-informe-contable-show/generar-informe-contable-show.component';
 
 export const routes: Routes = [
   { path: '', component: BienvenidaComponent },
@@ -16,8 +16,8 @@ export const routes: Routes = [
   { path: 'formulario-envio', component: FormularioEnvioComponent },
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
-  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent}
-
+  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
+  { path: 'generar-informe-contable-show' , component:GenerarInformeContableShowComponent}
 
 ];
 
