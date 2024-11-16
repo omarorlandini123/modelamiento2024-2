@@ -1,167 +1,331 @@
+
+/* Ajusta el contenido principal para que no se solape con la barra lateral */
+.content-container {
+  margin-left: 65px; /* Mismo ancho que la barra lateral */
+  padding: 0; /* Añade espacio para que el contenido comience debajo de la barra superior */
+  margin-top: 50px; /* Asegúrate de que el contenido no se solape con la barra superior */
+  box-sizing: border-box; /* Garantiza que el ancho y el padding se calculen correctamente */
+  width: calc(100% - 65px); /* Ajusta el ancho dinámicamente para evitar desbordamiento */
+  flex: 1;
+}
 /* Barra lateral izquierda */
-.side-bar {
-    width: 60px;
-    background-color: #f3eefc;
+  .side-bar {
+    position: fixed;
+    width: 65px; /* Ajusta este ancho según el ancho de tu barra lateral */
+    height: 100vh;
+    background-color: #a8a3b3; /* Color de fondo de la barra lateral */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
-  
-  .side-bar-button {
-    margin-bottom: 20px;
-    flex-direction: column;
-    width: 65%;
-    align-items: center;
-    align-items: center;
-    color: #7a42f4;
-  }
-  
-  .pink-button {
-    background-color: #d6d2db;
-    border-radius: 50%;
-  }
-  
-  .purple-button {
-    background-color: #e0c3fc;
-    border-radius: 50%;
-  }
-
-
-/* barra superior */
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #d3c5e6; /* Color más suave */
-    padding: 0 16px;
-    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-  }
-  
-  .top-bar-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333; /* Color del texto del título */
-  }
-  
-  .top-bar-icons button {
-    margin-left: 10px; /* Espacio entre los íconos */
-  }
-  
-  .mat-icon-button {
-    color: #5e478d; /* Color de los íconos */
-  }
-  
-
----------------------------
-
-.form-container {
-    max-width: 800px;
-    margin: 0 auto; /* Centra el formulario */
-    padding: 2rem;
-    background-color: #d0cdd6e3;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(31, 29, 29, 0.1);
-  }
-  
-  .section {
-    margin-bottom: 2rem;
-  }
-  
-  .row {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: space-between;
-  }
-  
-  .column {
-    flex: 1;
-  }
-  
-  mat-form-field {
-    width: 100%;
-    background-color: rgba(161, 161, 167, 0.637);
-    border-radius: 8px; /* Bordes redondeados */
-    margin-bottom: 1.5rem; /* Aumenta el espaciado vertical */
-    padding: 0.5rem; /* Agrega padding interno para dar más espacio */
-    box-shadow: 0 1px 3px rgba(226, 223, 240, 0.1); /* Sombra ligera en los campos */
-  }
-  
-  mat-form-field.appearance-outline .mat-form-field-outline {
-    color: #4b425e;
-  }
-  
-  h2, h3 {
-    color: #000000d8;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-/* Ajustes de formulario */
-  .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Centrado vertical */
-    padding: 20px; /* Espacio en los bordes */
-    background-color: hwb(0 100% 0%); /* Color de fondo para resaltar */
-  }
-  
-  .form-container {
-    max-width: 900px; /* Limitar el ancho del formulario */
-    width: 100%;
-    padding: 20px;
-    background-color: #f7f4fa; /* Fondo del formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  }
-  
-  
-  .submit-button, .incident-button {
-    align-self: flex-end;
-    background-color: #4a396ee8;
-    color: rgb(163, 152, 180);
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(43, 42, 49, 0.87);
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:hover, .incident-button:hover {
-    background-color: #a497b9; /* Cambia a un tono más oscuro al hacer hover */
-  
-    
-    .mat-mdc-raised-button.mat-primary {
-        // Cambia el color de fondo del botón
-        --mdc-protected-button-container-color: #492f53;
-        
-        // Opcionalmente, personaliza otros estilos aquí
-        background-color: var(--mdc-protected-button-container-color);
-        
-        // Define el color de texto
-        color: #867f9180;
-    }
-
-    button.register-button,
-    button.incident-button {
-        background-color: #673ab7;
-        color: #ffffff;
-        margin-top: 20px;
-        width: fit-content;
-        align-self: flex-end;
-    }
+/* Botones de la barra lateral */
+.side-bar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40% 0;
+  color: #908299; /* Color del icono */
+  font-size: 12px;
+  background-color: #e6dbeb9b; /* Fondo del botón */
+  border-radius: 45%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-  
+/* Efecto hover para los botones */
+.side-bar-button:hover {
+  background-color: #ffffff;
+}
+/* Texto debajo de los iconos */
+.side-bar-button span {
+  font-size: 13px;
+  color: #433b3b;
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Fuente estilizada */
+  font-weight: 800; /* Negrita más fuerte */
+}
+
+/* Botón "+" sin borde */
+.pink-button {
+  background-color: #8b6490c8;
+  border: none; /* Sin borde */
+  border-radius: 17px; /* Botón redondeado */
+  color: rgba(72, 13, 114, 0.8);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Efecto hover para el botón "+" */
+.pink-button:hover {
+  background-color: #e1d5f5; /* Cambia ligeramente el color al pasar el cursor */
+}
+/* Estilo del símbolo "+" */
+.pink-button mat-icon {
+  font-size: 20px; /* Aumenta el tamaño del icono */
+  font-weight: bold; /* Hace el símbolo más grueso */
+  line-height: 1; /* Centra el símbolo verticalmente */
+}
+
+/* Estilo para botones de "Label" con icono centrado */
+.label-button {
+  position: relative;
+  background-color: #d0cdd7;
+  border: 2px solid #666267; /* Borde morado */
+  border-radius: 50%; /* Círculo */
+  width: 38px;
+  height: 38px;
+  color: #150420;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label-button mat-icon {
+  font-size: 23px; /* Tamaño de la estrella centrada */
+}
+.label-button:hover {
+  background-color: #ffffff; /* Color más oscuro al pasar el cursor */
+  transform: scale(1.05); /* Ligero efecto de agrandamiento */
+}
+/* Texto debajo de los botones */
+.button-text {
+  margin-top: 10px;
+  font-size: 13px; /* Tamaño más grande */
+  color: #19181a; /* Color morado */
+  font-family: 'Poppins', sans-serif; /* Fuente elegante */
+  font-weight: 780; /* Seminegrita */
+  text-align: center;
+  letter-spacing: 0.1px; /* Espaciado entre letras */
+  transition: color 0.3s ease;
+}
+.button-text:hover {
+  color: #373737; /* Cambia el color al pasar el cursor */
+}
+/* Texto debajo del círculo */
+.label-button span {
+  position: absolute;
+  bottom: -18px;
+  font-size: 10px;
+  color: #5d5396;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+/* Estilo para el botón "Incidencias" que resalte */
+.purple-button {
+  position: relative;
+  background-color: #a289e67e;
+  border-radius: 50%;
+  color: #050008;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(248, 210, 255, 0.6); /* Sombra para resaltar */
+  border: none; /* Sin borde */
+  margin: 10px auto; /* Centrado horizontal */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  cursor: pointer;
+}
+/* Efecto hover para el botón */
+.purple-button:hover {
+  background-color: #4f3381; /* Color al pasar el cursor */
+  box-shadow: 0 0 15px rgba(149, 117, 205, 0.8); /* Sombra más intensa */
+}
+/* Posicionamiento centrado del icono de estrella */
+.purple-button mat-icon {
+  font-size: 24px; /* Tamaño del icono */
+  transition: color 0.3s ease; /* Transición para el color del icono */
+  line-height: 1; /* Asegura que el icono esté perfectamente centrado */
+}
+.purple-button:hover mat-icon {
+  color: #ffffff; /* Cambia el color del icono al pasar el cursor */
+}
+/* Texto debajo del botón */
+.incidence-text {
+  margin-top: 5px; /* Espaciado entre el botón y el texto */
+  font-size: 12px;
+  color: #4a148c;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transición suave para el texto */
+}
+.purple-button:hover + .button-text {
+  color: #000000; /* Cambia el color del texto al pasar el cursor */
+}
+/* Botón de menú (tres líneas) sin fondo ni borde */
+.menu-button {
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: #44364d; /* Color del icono */
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+/* Ajustar el tamaño del icono dentro del botón */
+.menu-button mat-icon {
+  font-size: 25px; /* Aumenta el tamaño del icono */
+}
+/* Efecto hover para el botón de menú */
+.menu-button:hover {
+  color: #e0e0e0; /* Cambia el color al pasar el cursor */
+}
+/* barra superio */
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Distribuye elementos a las esquinas */
+  left: 0; /* Mismo ancho que la barra lateral */
+  top: 0; /* Asegura que esté en el borde superior */
+  width: 100%;
+  height: 50px; /* Ajusta la altura según tu diseño */
+  background-color: #b1a3b8; /* Color de la barra de título */
+  align-items: center;
+  padding: 0 5px; /* Espaciado interno para las esquinas */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fija la barra superior */
+
+}
+/* Contenedor izquierdo (flecha y título) */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+}
+/* Icono de la flecha */
+.top-bar-left mat-icon {
+  margin-right: 10px; /* Espaciado entre la flecha y el texto */
+  cursor: pointer;
+}
+/* Título de la barra */
+.top-bar-title {
+  font-size: 19px;
+  font-weight: bold;
+  color: #1d1a20;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Evitar desbordamiento */
+  text-overflow: ellipsis;
+}
+/* Contenedor derecho para los iconos */
+.top-bar-right {
+  display: flex;
+  gap: 15px; /* Espaciado entre los iconos */
+}
+/* Estilo de los iconos */
+.top-bar-right mat-icon {
+  font-size: 24px; /* Tamaño de los iconos */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.top-bar-right mat-icon:hover {
+  color: #c8b9e2; /* Cambia el color al pasar el cursor */
+}
+/* color de icono */
+  button[mat-icon-button] {
+    color: #000000; /* Color de los íconos */
+  }
+---------------------------
+/* parte de seguimento */
+
+.top-bar + mat-tab-group {
+  margin-top: 0; /* Combina la barra superior con el tab */
+  top: 0; /* Sin desplazamiento */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina relleno */
+}
+.tabs-container {
+    position: sticky;
+    top: 50px; /* Ajusta según la altura de tu barra superior */
+    z-index: 2; /* Para que los tabs estén encima del contenido */
+    background-color: rgb(223, 211, 223); /* Fondo para evitar transparencia */
+    border-bottom: 1px solid #6d4f5b; /* Línea divisoria debajo de los tabs */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-left: 0px; /* Ajusta este valor al ancho exacto de tu barra lateral */
+
+    padding: 10px 15px; /* Ajuste de espacio alrededor del texto */
+}
+.tabs {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 30px; /* Altura para centrar verticalmente */
+}
+.tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #4d3a5c; /* Color del texto */
+  font-weight: bold;
+  text-align: center; /* Asegura que el texto dentro esté centrado */
+}
+.tab-item.active {
+  border-bottom: 3px solid #4d314b; /* Marca el tab activo */
+}
+.tab-item:hover {
+  color: #555555; /* Cambia el color al pasar el cursor */
+}
+
+.main-container {
+  background-color: #857f91; /* Color de fondo del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px auto; /* Centra el contenedor */
+  max-width: 80%; /* Ancho máximo */
+}
+.row {
+  display: flex;
+  justify-content: space-between; /* Espaciado entre cuadros */
+  margin-bottom: 20px; /* Espaciado entre filas */
+  width: 100%;
+}
+.column {
+  flex: 1;
+  margin: 0 10px; /* Espaciado lateral entre columnas */
+}
+
+mat-form-field {
+  width: 100%; /* Asegura el ancho completo en las columnas */
+}
+.register-button, .incident-button {
+  align-self: center; /* Centra los botones */
+  margin-top: 20px;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre los elementos internos */
+}
+.form-container {
+  display: flex; /* Activar el modelo de caja flexible */
+  flex-direction: column; /* Mantener la dirección de los elementos en columna */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100%; /* Asegúrate de que ocupe toda la altura disponible */
+  margin: 20px auto; /* Centra horizontalmente */
+  padding: 20px; /* Añade algo de espacio interno */
+}
+
+
+.incident-description-container {
+  background-color: #857f91; /* Fondo similar al primer contenedor */
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+}

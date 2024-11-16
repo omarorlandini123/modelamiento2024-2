@@ -19,7 +19,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    MatTabsModule // Importa MatTabsModule aquí
+    MatTabsModule 
   ],
   templateUrl: './formulario-registro.component.html',
   styleUrls: ['./formulario-registro.component.scss']
