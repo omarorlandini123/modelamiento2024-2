@@ -4,7 +4,7 @@
     </mat-card-header>
     <mat-card-content>
       <form (ngSubmit)="generarReporte()">
-        <!-- Selección de Proyecto -->
+
         <mat-form-field appearance="fill">
           <mat-label>Seleccionar Proyecto</mat-label>
           <mat-select [(ngModel)]="selectedProyecto" name="proyecto">
@@ -14,7 +14,7 @@
           </mat-select>
         </mat-form-field>
   
-        <!-- Fecha de Reporte -->
+
         <mat-form-field appearance="fill">
           <mat-label>Fecha de Reporte</mat-label>
           <mat-datepicker #pickerStart></mat-datepicker>
@@ -27,7 +27,7 @@
           <input matInput [matDatepicker]="pickerEnd" [(ngModel)]="fechaFin" name="fechaFin" placeholder="Hasta">
         </mat-form-field>
   
-        <!-- Tipo de Reporte -->
+
         <mat-form-field appearance="fill">
           <mat-label>Tipo de Reporte</mat-label>
           <mat-select [(ngModel)]="selectedTipoReporte" name="tipoReporte">
@@ -36,7 +36,7 @@
           </mat-select>
         </mat-form-field>
   
-        <!-- Estado -->
+
         <mat-form-field appearance="fill">
           <mat-label>Estado</mat-label>
           <mat-select [(ngModel)]="selectedEstado" name="estado">
@@ -46,11 +46,11 @@
           </mat-select>
         </mat-form-field>
   
-        <!-- Botón para generar el reporte -->
+
         <button mat-raised-button color="primary" type="submit">Generar Reporte</button>
       </form>
   
-      <!-- Reporte generado y vista previa -->
+
       <div *ngIf="reporteGenerado">
         <h3>Reporte Generado</h3>
         <mat-card>
@@ -67,7 +67,7 @@
           </mat-card-content>
         </mat-card>
   
-        <!-- Botones de acciones -->
+
         <button mat-raised-button color="accent" (click)="exportarAExcel()">Exportar a Excel</button>
         <button mat-raised-button color="warn" (click)="imprimirReporte()">Imprimir</button>
         <button mat-raised-button (click)="verDetallesProyecto()">Ver Detalles del Proyecto</button>
