@@ -21,3 +21,14 @@ describe('DetalleClienteComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+
+
+
+
+
+
+
+

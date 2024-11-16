@@ -1,0 +1,75 @@
+<div class="gestion-tareas">
+    <mat-card class="contenedor-principal">
+      <div class="header">
+        <h1>Gestión de Progreso de Tareas</h1>
+        <mat-divider></mat-divider>
+      </div>
+  
+      <section class="seccion">
+        <h2>Información de la Tarea</h2>
+        <div class="info-proyecto">
+          <p><strong>Proyecto:</strong> {{ tarea.proyecto }}</p>
+          <p><strong>Tarea:</strong> {{ tarea.nombre }}</p>
+          <p><strong>Fecha de Inicio:</strong> {{ tarea.fechaInicio }}</p>
+          <p><strong>Fecha de Entrega:</strong> {{ tarea.fechaEntrega }}</p>
+
+
+          
+        </div>
+
+      </section>
+  
+      <section class="seccion">
+        <h2>Estado y Progreso</h2>
+        <mat-form-field appearance="fill">
+          <mat-label>Estado Actual</mat-label>
+          <mat-select [(value)]="tarea.estado" (selectionChange)="actualizarEstado($event.value)">
+            <mat-option *ngFor="let estado of estados" [value]="estado">{{ estado }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <div class="progreso">
+          <p><strong>Progreso:</strong> {{ tarea.progreso }}%</p>
+          <mat-progress-bar color="primary" [value]="tarea.progreso"></mat-progress-bar>
+        </div>
+      </section>
+  
+
+      <section class="seccion">
+        <h2>Detalles Adicionales</h2>
+        <p><strong>Tiempo Consumido:</strong> {{ tarea.tiempoConsumido }}</p>
+  
+        <div class="recursos">
+          <h3>Recursos Utilizados</h3>
+          <ul>
+            <li *ngFor="let recurso of tarea.recursos">{{ recurso }}</li>
+          </ul>
+        </div>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Obstáculos/Problemas</mat-label>
+          <textarea
+            matInput
+            placeholder="Describe los obstáculos encontrados"
+            [(ngModel)]="tarea.obstaculos"
+          ></textarea>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Comentarios</mat-label>
+          <textarea
+            matInput
+            placeholder="Añade comentarios relevantes"
+            [(ngModel)]="tarea.comentarios"
+          ></textarea>
+        </mat-form-field>
+      </section>
+  
+      <section class="acciones">
+        <button mat-raised-button color="primary" (click)="reasignarTarea()">Reasignar Tarea</button>
+        <button mat-raised-button color="accent" (click)="ajustarPrioridad()">Ajustar Prioridad</button>
+        <button mat-raised-button color="warn" (click)="generarInforme()">Generar Informe</button>
+      </section>
+    </mat-card>
+  </div>
+  

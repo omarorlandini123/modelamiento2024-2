@@ -1,0 +1,113 @@
+.monitoreo-recursos-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-card {
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  color: #3f51b5;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.project-info {
+  color: #666;
+  font-size: 18px;
+}
+
+.recurso-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recurso-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recurso-icon {
+  color: #3f51b5;
+  font-size: 40px;
+}
+
+.recurso-tipo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.recurso-details {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.recurso-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+button {
+  width: 48%;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+button.mat-raised-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.mat-raised-button:hover {
+  transform: scale(1.05);
+}
+
+button.mat-raised-button:active {
+  background-color: #9c27b0;
+}
+
+.ver-historial-general {
+  text-align: center;
+  margin-top: 30px;
+
+  button {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 30px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.estado-disponible {
+  color: #4caf50;
+}
+
+.estado-en-uso {
+  color: #ff9800;
+}
+
+.estado-pendiente {
+  color: #f44336;
+}
