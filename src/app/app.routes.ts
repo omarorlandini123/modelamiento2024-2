@@ -6,6 +6,7 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.component';
 import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.component';
 import { PagoEnvioComponent } from './pago-envio/pago-envio.component';
+import { GenerarInformeContableComponent } from './generar-informe-contable/generar-informe-contable.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'formulario-envio', component: FormularioEnvioComponent },
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
+  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent}
 
 
 ];
