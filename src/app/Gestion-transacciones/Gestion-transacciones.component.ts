@@ -6,7 +6,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
+<<<<<<< HEAD
 import { MatIconModule } from '@angular/material/icon'; 
+=======
+import { MatIconModule } from '@angular/material/icon'; // Para los iconos
+>>>>>>> 463067f (Administracion)
 
 @Component({
   selector: 'app-gestion-transacciones',

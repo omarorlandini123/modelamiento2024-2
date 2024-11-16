@@ -1,7 +1,7 @@
 import { provideRouter, Routes, withDebugTracing } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { ApplicationConfig } from '@angular/core';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+<<<<<<< HEAD
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.component';
 import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.component';
@@ -30,9 +30,30 @@ export const routes: Routes = [
 
 
 
+=======
+import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
+import { SolicitudRecursosComponent } from './Solicitud-Recursos/Solicitud-Recursos.component';
+import { GeneracionReportesComponent } from './Generacion-Reportes/Generacion-Reportes.component';
+import { GestionTransaccionesComponent } from './Gestion-transacciones/Gestion-transacciones.component';
+import { MonitoreoRecursosComponent } from './Monitoreo-recursos/Monitoreo-Recursos.component';
+import { ApplicationConfig } from '@angular/core';
+
+export const routes: Routes = [
+    { path: '', component: BienvenidaComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'gestion-tareas', component: GestionTareasComponent },
+    { path: 'solicitud-recursos', component: SolicitudRecursosComponent } ,
+    { path: 'generacion-reportes', component: GeneracionReportesComponent },
+    { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
+    {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent}
+>>>>>>> 463067f (Administracion)
 
 ];
 
 export const appConfig: ApplicationConfig = {
+<<<<<<< HEAD
   providers: [provideRouter(routes, withDebugTracing())],
+=======
+    providers: [provideRouter(routes, withDebugTracing())]
+>>>>>>> 463067f (Administracion)
 };

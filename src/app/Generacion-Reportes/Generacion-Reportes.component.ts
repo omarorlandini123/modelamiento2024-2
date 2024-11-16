@@ -29,28 +29,44 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./generacion-reportes.component.scss']
 })
 export class GeneracionReportesComponent {
+<<<<<<< HEAD
 
+=======
+  // Datos de ejemplo para proyectos
+>>>>>>> 463067f (Administracion)
   proyectos = [
     { id: 1, nombre: 'Proyecto A' },
     { id: 2, nombre: 'Proyecto B' },
     { id: 3, nombre: 'Proyecto C' }
   ];
 
+<<<<<<< HEAD
 
+=======
+  // Modelos de datos de selección
+>>>>>>> 463067f (Administracion)
   selectedProyecto: any;
   selectedTipoReporte: string = 'Progreso de Tareas';
   selectedEstado: string = 'Todos';
   fechaInicio: Date | null = null;
   fechaFin: Date | null = null;
 
+<<<<<<< HEAD
 
+=======
+  // Datos de ejemplo para reportes generados
+>>>>>>> 463067f (Administracion)
   reporteGenerado: boolean = false;
   progresoTareasVistaPrevia: string = 'Vista previa del progreso de las tareas aquí.';
   informeFinancieroVistaPrevia: string = 'Vista previa de las transacciones y balance aquí.';
 
   constructor() {}
 
+<<<<<<< HEAD
 
+=======
+  // Función para generar el reporte
+>>>>>>> 463067f (Administracion)
   generarReporte(): void {
     this.reporteGenerado = true;
 
@@ -61,6 +77,7 @@ export class GeneracionReportesComponent {
     }
   }
 
+<<<<<<< HEAD
 
   exportarAExcel(): void {
     console.log('Exportando reporte a Excel...');
@@ -68,14 +85,30 @@ export class GeneracionReportesComponent {
   }
 
  
+=======
+  // Función para exportar el reporte a Excel (solo ejemplo)
+  exportarAExcel(): void {
+    console.log('Exportando reporte a Excel...');
+    // Aquí se puede integrar una lógica para generar un archivo Excel con los datos del reporte
+  }
+
+  // Función para imprimir el reporte (solo ejemplo)
+>>>>>>> 463067f (Administracion)
   imprimirReporte(): void {
     console.log('Imprimiendo reporte...');
     window.print();
   }
 
+<<<<<<< HEAD
 
   verDetallesProyecto(): void {
     console.log('Mostrando detalles del proyecto...');
   
+=======
+  // Función para ver los detalles del proyecto
+  verDetallesProyecto(): void {
+    console.log('Mostrando detalles del proyecto...');
+    // Aquí puedes navegar a una página de detalles del proyecto o mostrar más información
+>>>>>>> 463067f (Administracion)
   }
 }
