@@ -5,7 +5,6 @@
         <mat-divider></mat-divider>
       </div>
   
-      <!-- Información del proyecto -->
       <section class="seccion">
         <h2>Información de la Tarea</h2>
         <div class="info-proyecto">
@@ -13,10 +12,13 @@
           <p><strong>Tarea:</strong> {{ tarea.nombre }}</p>
           <p><strong>Fecha de Inicio:</strong> {{ tarea.fechaInicio }}</p>
           <p><strong>Fecha de Entrega:</strong> {{ tarea.fechaEntrega }}</p>
+
+
+          
         </div>
+
       </section>
   
-      <!-- Estado y progreso -->
       <section class="seccion">
         <h2>Estado y Progreso</h2>
         <mat-form-field appearance="fill">
@@ -32,7 +34,7 @@
         </div>
       </section>
   
-      <!-- Detalles adicionales -->
+
       <section class="seccion">
         <h2>Detalles Adicionales</h2>
         <p><strong>Tiempo Consumido:</strong> {{ tarea.tiempoConsumido }}</p>
@@ -63,7 +65,6 @@
         </mat-form-field>
       </section>
   
-      <!-- Acciones -->
       <section class="acciones">
         <button mat-raised-button color="primary" (click)="reasignarTarea()">Reasignar Tarea</button>
         <button mat-raised-button color="accent" (click)="ajustarPrioridad()">Ajustar Prioridad</button>

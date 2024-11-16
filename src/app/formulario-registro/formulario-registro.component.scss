@@ -1,0 +1,167 @@
+/* Barra lateral izquierda */
+.side-bar {
+    width: 60px;
+    background-color: #f3eefc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .side-bar-button {
+    margin-bottom: 20px;
+    flex-direction: column;
+    width: 65%;
+    align-items: center;
+    align-items: center;
+    color: #7a42f4;
+  }
+  
+  .pink-button {
+    background-color: #d6d2db;
+    border-radius: 50%;
+  }
+  
+  .purple-button {
+    background-color: #e0c3fc;
+    border-radius: 50%;
+  }
+
+
+/* barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d3c5e6; /* Color más suave */
+    padding: 0 16px;
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  }
+  
+  .top-bar-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333; /* Color del texto del título */
+  }
+  
+  .top-bar-icons button {
+    margin-left: 10px; /* Espacio entre los íconos */
+  }
+  
+  .mat-icon-button {
+    color: #5e478d; /* Color de los íconos */
+  }
+  
+
+---------------------------
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el formulario */
+    padding: 2rem;
+    background-color: #d0cdd6e3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(31, 29, 29, 0.1);
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    background-color: rgba(161, 161, 167, 0.637);
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 1.5rem; /* Aumenta el espaciado vertical */
+    padding: 0.5rem; /* Agrega padding interno para dar más espacio */
+    box-shadow: 0 1px 3px rgba(226, 223, 240, 0.1); /* Sombra ligera en los campos */
+  }
+  
+  mat-form-field.appearance-outline .mat-form-field-outline {
+    color: #4b425e;
+  }
+  
+  h2, h3 {
+    color: #000000d8;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+/* Ajustes de formulario */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centrado vertical */
+    padding: 20px; /* Espacio en los bordes */
+    background-color: hwb(0 100% 0%); /* Color de fondo para resaltar */
+  }
+  
+  .form-container {
+    max-width: 900px; /* Limitar el ancho del formulario */
+    width: 100%;
+    padding: 20px;
+    background-color: #f7f4fa; /* Fondo del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  
+  .submit-button, .incident-button {
+    align-self: flex-end;
+    background-color: #4a396ee8;
+    color: rgb(163, 152, 180);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(43, 42, 49, 0.87);
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover, .incident-button:hover {
+    background-color: #a497b9; /* Cambia a un tono más oscuro al hacer hover */
+  
+    
+    .mat-mdc-raised-button.mat-primary {
+        // Cambia el color de fondo del botón
+        --mdc-protected-button-container-color: #492f53;
+        
+        // Opcionalmente, personaliza otros estilos aquí
+        background-color: var(--mdc-protected-button-container-color);
+        
+        // Define el color de texto
+        color: #867f9180;
+    }
+
+    button.register-button,
+    button.incident-button {
+        background-color: #673ab7;
+        color: #ffffff;
+        margin-top: 20px;
+        width: fit-content;
+        align-self: flex-end;
+    }
+}
+  

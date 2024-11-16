@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon'; // Para los iconos
+import { MatIconModule } from '@angular/material/icon'; 
 
 @Component({
   selector: 'app-gestion-transacciones',

@@ -1,3 +1,4 @@
+
 export class Usuario {
 
     usuario: String = "";

@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>🧳 Lista de Empleados y Pagos 💰</h2>
+    <p>Mes y Año de Pago: Enero 2024 📅</p>
+    <input type="text" placeholder="Buscar empleados..." class="search-bar" />
+  
+    <button class="export-btn" (click)="exportarCSV()">📤 Exportar a CSV</button>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>EMPLEADO</th>
+          <th>CARGO 📚</th>
+          <th>FECHA DE INICIO 📅</th>
+          <th>EMAIL 📧</th>
+          <th>HORAS TRABAJADAS ⏱</th>
+          <th>PAGO POR HORA 💵</th>
+          <th>TOTAL A PAGAR 💰</th>
+          <th>ESTADO DE PAGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.cargo }}</td>
+          <td>{{ empleado.fechaInicio }}</td>
+          <td>{{ empleado.email }}</td>
+          <td>{{ empleado.horasTrabajadas }} hrs.</td>
+          <td>${{ empleado.pagoPorHora }}</td>
+          <td>${{ empleado.totalPagar }}</td>
+          <td>
+            <span class="estado-pago" [class.pagado]="empleado.pagado">
+              {{ empleado.pagado ? 'Pagado' : 'No Pagado' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6" class="total-label">Total a Pagar</td>
+          <td colspan="2">${{ totalPagar }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  

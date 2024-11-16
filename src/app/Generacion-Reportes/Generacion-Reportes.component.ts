@@ -29,28 +29,28 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./generacion-reportes.component.scss']
 })
 export class GeneracionReportesComponent {
-  // Datos de ejemplo para proyectos
+
   proyectos = [
     { id: 1, nombre: 'Proyecto A' },
     { id: 2, nombre: 'Proyecto B' },
     { id: 3, nombre: 'Proyecto C' }
   ];
 
-  // Modelos de datos de selección
+
   selectedProyecto: any;
   selectedTipoReporte: string = 'Progreso de Tareas';
   selectedEstado: string = 'Todos';
   fechaInicio: Date | null = null;
   fechaFin: Date | null = null;
 
-  // Datos de ejemplo para reportes generados
+
   reporteGenerado: boolean = false;
   progresoTareasVistaPrevia: string = 'Vista previa del progreso de las tareas aquí.';
   informeFinancieroVistaPrevia: string = 'Vista previa de las transacciones y balance aquí.';
 
   constructor() {}
 
-  // Función para generar el reporte
+
   generarReporte(): void {
     this.reporteGenerado = true;
 
@@ -61,21 +61,21 @@ export class GeneracionReportesComponent {
     }
   }
 
-  // Función para exportar el reporte a Excel (solo ejemplo)
+
   exportarAExcel(): void {
     console.log('Exportando reporte a Excel...');
-    // Aquí se puede integrar una lógica para generar un archivo Excel con los datos del reporte
+    
   }
 
-  // Función para imprimir el reporte (solo ejemplo)
+ 
   imprimirReporte(): void {
     console.log('Imprimiendo reporte...');
     window.print();
   }
 
-  // Función para ver los detalles del proyecto
+
   verDetallesProyecto(): void {
     console.log('Mostrando detalles del proyecto...');
-    // Aquí puedes navegar a una página de detalles del proyecto o mostrar más información
+  
   }
 }

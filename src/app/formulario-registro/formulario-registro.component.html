@@ -1,0 +1,172 @@
+
+
+<!-- Contenedor principal que incluye la barra lateral y el contenido central -->
+<div class="main-container">
+  
+    <!-- Barra lateral izquierda -->
+    <div class="side-bar">
+      <button mat-icon-button aria-label="Menu" class="side-bar-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Add" class="side-bar-button pink-button">
+        <mat-icon>add</mat-icon>
+      </button>
+      <div class="side-bar-labels">
+        <button mat-icon-button aria-label="Label" class="side-bar-button">
+          <mat-icon>star</mat-icon>
+          <span>Label</span>
+        </button>
+        <button mat-icon-button aria-label="Label" class="side-bar-button">
+          <mat-icon>star</mat-icon>
+          <span>Label</span>
+        </button>
+        <button mat-icon-button aria-label="Label" class="side-bar-button">
+          <mat-icon>star</mat-icon>
+          <span>Label</span>
+        </button>
+        <button mat-icon-button aria-label="Incidencias" class="side-bar-button purple-button">
+          <mat-icon>report</mat-icon>
+          <span>Incidencias</span>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Contenedor de la parte principal -->
+    <div class="content-container">
+      
+      <!-- Barra superior -->
+      <div class="top-bar">
+        <button mat-icon-button aria-label="Back">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <span class="top-bar-title">Registrar Incidentes</span>
+        <span class="top-bar-icons">
+          <button mat-icon-button aria-label="Attach">
+            <mat-icon>attach_file</mat-icon>
+          </button>
+          <button mat-icon-button aria-label="Calendar">
+            <mat-icon>calendar_today</mat-icon>
+          </button>
+          <button mat-icon-button aria-label="More Options">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </span>
+      </div>
+  
+      <!-- Contenido del formulario -->
+      <div class="main-content">
+        <mat-tab-group>
+          <mat-tab label="Seguimiento">
+            <div class="form-container">
+              <!-- Sección de Registro -->
+              <h3>Registro</h3>
+              <div class="row">
+                <div class="column">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="Nombre" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Código</mat-label>
+                    <input matInput placeholder="Código" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput placeholder="Teléfono" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+  
+                <div class="column">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput placeholder="Apellidos" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput placeholder="Correo electrónico" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input matInput placeholder="Dirección" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+              </div>
+  
+              <button mat-raised-button color="primary" class="register-button">Registrar</button>
+  
+              <!-- Sección de Descripción del Incidente -->
+              <h3>Descripción de Incidente</h3>
+              <div class="row">
+                <div class="column">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ingrese el Incidente</mat-label>
+                    <input matInput placeholder="Ingrese el Incidente" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ingrese la hora</mat-label>
+                    <input matInput placeholder="Ingrese la hora" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+  
+                <div class="column">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ingrese la fecha</mat-label>
+                    <input matInput placeholder="Ingrese la fecha" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Código de Cliente</mat-label>
+                    <input matInput placeholder="Código de Cliente" />
+                    <button mat-icon-button matSuffix>
+                      <mat-icon>clear</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+              </div>
+  
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Descripción detallada del incidente</mat-label>
+                <textarea matInput placeholder="Descripción detallada del incidente"></textarea>
+              </mat-form-field>
+  
+              <button mat-raised-button color="primary" class="incident-button">Registrar Incidente</button>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+  
+    </div>
+  </div>
+  

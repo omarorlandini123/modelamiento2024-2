@@ -23,10 +23,10 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./Monitoreo-Recursos.component.scss']
 })
 export class MonitoreoRecursosComponent {
-  // Propiedad que se utilizará en el template
-  proyectoNombre: string = 'Proyecto de Desarrollo de Software'; // Asigna el nombre del proyecto aquí
 
-  // Lista de recursos para mostrar en el monitoreo
+  proyectoNombre: string = 'Proyecto de Desarrollo de Software'; 
+
+ 
   recursos = [
     {
       tipo: 'Material',
@@ -51,17 +51,17 @@ export class MonitoreoRecursosComponent {
     }
   ];
 
-  // Función para asignar un recurso
+  
   asignarRecurso(recurso: any) {
     console.log('Recurso asignado:', recurso);
   }
 
-  // Función para ver historial de uso de un recurso
+  
   verHistorial(recurso: any) {
     console.log('Ver historial de uso para:', recurso);
   }
 
-  // Nueva función para ver historial general de recursos
+  
   verHistorialGeneral() {
     console.log('Ver historial general de recursos');
   }
