@@ -7,13 +7,9 @@ import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.co
 import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.component';
 import { PagoEnvioComponent } from './pago-envio/pago-envio.component';
 import { GenerarInformeContableComponent } from './generar-informe-contable/generar-informe-contable.component';
-<<<<<<< HEAD
-import { GenerarInformeContableShowComponent } from './generar-informe-contable-show/generar-informe-contable-show.component';
-=======
-import{ ControldeCalidadComponent}from './controlde-calidad/controlde-calidad.component';
-import { generate } from 'rxjs';
+import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
 
->>>>>>> 18a2c386590f1db29e05ced122067e9fb0fb3454
+
 
 export const routes: Routes = [
   { path: '', component: BienvenidaComponent },
@@ -23,12 +19,10 @@ export const routes: Routes = [
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
   { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-<<<<<<< HEAD
-  { path: 'generar-informe-contable-show' , component:GenerarInformeContableShowComponent}
-=======
-  { path: 'controlde-calidad', component: ControldeCalidadComponent}
+    { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
+    { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
 
->>>>>>> 18a2c386590f1db29e05ced122067e9fb0fb3454
+
 
 ];
 
