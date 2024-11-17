@@ -1,0 +1,73 @@
+<div class="form-container">
+    <form>
+      <!-- Título -->
+      <div class="form-group">
+        <label for="titulo" class="form-label">Título</label>
+        <div class="input-with-icon">
+          <input
+            type="text"
+            id="titulo"
+            class="form-control"
+            placeholder="Ingrese nombre"
+          />
+          <span class="icon">🖊️</span>
+        </div>
+      </div>
+  
+      <!-- Fecha y Hora -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fecha" class="form-label">Fecha:</label>
+          <div class="custom-input">
+            <input
+              type="date"
+              id="fecha"
+              class="form-control"
+            />
+            <span class="icon"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="hora" class="form-label">Hora:</label>
+          <div class="custom-input">
+            <input
+              type="time"
+              id="hora"
+              class="form-control"
+            />
+            <span class="icon"></span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Descripción y Materiales -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea
+            id="descripcion"
+            class="form-control"
+            rows="6"
+            placeholder="Ingrese descripción"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="materiales" class="form-label">Materiales</label>
+          <div class="input-with-icon">
+            <input
+              type="file"
+              id="materiales"
+              class="form-control"
+            />
+            <span class="icon">📎</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Botón Publicar -->
+      <div class="form-group text-right">
+        <button type="submit" class="btn btn-primary">Publicar</button>
+      </div>
+    </form>
+  </div>
+  

@@ -8,6 +8,8 @@ import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.compo
 import { PagoEnvioComponent } from './pago-envio/pago-envio.component';
 import { GenerarInformeContableComponent } from './generar-informe-contable/generar-informe-contable.component';
 import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
+import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
+import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
 
 
 
@@ -21,6 +23,9 @@ export const routes: Routes = [
   { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
     { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
     { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
+    { path: 'seguridad-salud' , component: SeguridadSaludComponent},
+    { path: 'capacitaciones' , component: CapacitacionesComponent},
+
 
 
 
