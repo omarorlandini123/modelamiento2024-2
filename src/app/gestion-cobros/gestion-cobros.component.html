@@ -1,0 +1,81 @@
+<!-- gestion-cobros.component.html -->
+<div class="gestion-cobros">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <span class="back-arrow">←</span>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item active">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-chart-bar"></i>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-list"></i>
+      </div>
+      <div class="menu-item">
+        <i class="fas fa-file"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="search-section">
+      <div class="search-container">
+        <div class="search-row">
+          <div class="search-field">
+            <input type="text" placeholder="Nombre" [(ngModel)]="filtros.nombre">
+          </div>
+          <div class="search-field">
+            <input type="text" placeholder="ID" [(ngModel)]="filtros.id">
+          </div>
+        </div>
+        
+        <div class="filtros">
+          <h3>FILTROS</h3>
+          <div class="filtros-row">
+            <input type="date" [(ngModel)]="filtros.fecha" placeholder="FECHA">
+            <input type="text" [(ngModel)]="filtros.pedido" placeholder="PEDIDO">
+            <input type="number" [(ngModel)]="filtros.cantidad" placeholder="CANTIDAD">
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <button class="btn-buscar" (click)="buscar()">BUSCAR</button>
+          <button class="btn-exportar" (click)="exportarPDF()">EXPORTAR PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th>CLIENTE</th>
+            <th>FECHA</th>
+            <th>PRODUCTO</th>
+            <th>MONTO</th>
+            <th>ACCIÓN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cobro of cobros">
+            <td>{{cobro.id}}</td>
+            <td>{{cobro.cliente}}</td>
+            <td>{{cobro.fecha}}</td>
+            <td>{{cobro.producto}}</td>
+            <td>S/ {{cobro.monto.toFixed(2)}}</td>
+            <td>
+              <button class="btn-cobrar" (click)="cobrar(cobro)">COBRAR</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
