@@ -7,6 +7,7 @@ import { FormularioEnvioComponent } from './formulario-envio/formulario-envio.co
 import { ConfirmarEnvioComponent } from './confirmar-envio/confirmar-envio.component';
 import { PagoEnvioComponent } from './pago-envio/pago-envio.component';
 import { GenerarInformeContableComponent } from './generar-informe-contable/generar-informe-contable.component';
+import { GenerarInformeContableShowComponent } from './generar-informe-contable-show/generar-informe-contable-show.component';
 import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: 'pago-envio', component: PagoEnvioComponent },
   { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
   { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
+  { path: 'generar-informe-contable-show' , component: GenerarInformeContableShowComponent},
   { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
   { path: 'seguridad-salud' , component: SeguridadSaludComponent},
   { path: 'capacitaciones' , component: CapacitacionesComponent},
