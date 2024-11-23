@@ -12,7 +12,7 @@ import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
 import { RegistroVentasComponent } from './registro-ventas/registro-ventas.component';
 import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-cliente.component';
-
+import { GestionCobrosComponent } from './gestion-cobros/gestion-cobros.component';
 
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
 //import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
@@ -49,7 +49,8 @@ export const routes: Routes = [
  {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
  {path: 'gestion-contenido-p' , component:GestionContenidoPComponent},
  {path: 'gestion-contenido-editar' , component:GestionContenidoEditarComponent},
- {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent}
+ {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent},
+ {path: 'gestion-cobros',component:GestionCobrosComponent}
   //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
 ];
 
