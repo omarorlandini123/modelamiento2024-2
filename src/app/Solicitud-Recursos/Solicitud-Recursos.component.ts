@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-resource-requests',
-  templateUrl: './resource-requests.component.html',
-  styleUrls: ['./resource-requests.component.scss']
+  selector: 'app-solicitud-recursos',
+  templateUrl: './solicitud-recursos.component.html',
+  styleUrls: ['./solicitud-recursos.component.scss']
 })
 export class SolicitudRecursosComponent {
   // Lista de todas las solicitudes de recursos
