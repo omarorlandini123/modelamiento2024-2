@@ -1,4 +1,3 @@
-<!-- gestion-cobros.component.html -->
 <div class="gestion-cobros">
   <!-- Sidebar -->
   <div class="sidebar">
@@ -6,16 +5,16 @@
       <span class="back-arrow">←</span>
     </div>
     <div class="menu-items">
-      <div class="menu-item active">
+      <div class="menu-item active" title="Agregar nuevo cobro">
         <i class="fas fa-plus"></i>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" title="Ver estadísticas">
         <i class="fas fa-chart-bar"></i>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" title="Ver lista de cobros">
         <i class="fas fa-list"></i>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" title="Generar reporte">
         <i class="fas fa-file"></i>
       </div>
     </div>
@@ -27,25 +26,36 @@
       <div class="search-container">
         <div class="search-row">
           <div class="search-field">
-            <input type="text" placeholder="Nombre" [(ngModel)]="filtros.nombre">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="Nombre" [(ngModel)]="filtros.nombre">
           </div>
           <div class="search-field">
-            <input type="text" placeholder="ID" [(ngModel)]="filtros.id">
+            <label for="id">ID</label>
+            <input id="id" type="text" placeholder="ID" [(ngModel)]="filtros.id">
           </div>
         </div>
         
         <div class="filtros">
           <h3>FILTROS</h3>
           <div class="filtros-row">
-            <input type="date" [(ngModel)]="filtros.fecha" placeholder="FECHA">
-            <input type="text" [(ngModel)]="filtros.pedido" placeholder="PEDIDO">
-            <input type="number" [(ngModel)]="filtros.cantidad" placeholder="CANTIDAD">
+            <div class="search-field">
+              <label for="fecha">Fecha</label>
+              <input id="fecha" type="date" [(ngModel)]="filtros.fecha" placeholder="FECHA">
+            </div>
+            <div class="search-field">
+              <label for="pedido">Pedido</label>
+              <input id="pedido" type="text" [(ngModel)]="filtros.pedido" placeholder="PEDIDO">
+            </div>
+            <div class="search-field">
+              <label for="cantidad">Cantidad</label>
+              <input id="cantidad" type="number" [(ngModel)]="filtros.cantidad" placeholder="CANTIDAD">
+            </div>
           </div>
         </div>
 
         <div class="buttons-container">
-          <button class="btn-buscar" (click)="buscar()">BUSCAR</button>
-          <button class="btn-exportar" (click)="exportarPDF()">EXPORTAR PDF</button>
+          <button type="button" class="btn-buscar" (click)="buscar()">BUSCAR</button>
+          <button type="button" class="btn-exportar" (click)="exportarPDF()">EXPORTAR PDF</button>
         </div>
       </div>
     </div>
