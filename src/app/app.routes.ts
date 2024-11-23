@@ -10,6 +10,8 @@ import { GenerarInformeContableShowComponent } from './generar-informe-contable-
 import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
+import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-cliente.component';
+
 
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
 import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
@@ -38,6 +40,7 @@ export const routes: Routes = [
   { path: 'generacion-reportes', component: GeneracionReportesComponent },
   { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
   {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent}
+  { path: '', component: DetalleClienteComponent },
  
 ];
 
