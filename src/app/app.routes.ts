@@ -11,11 +11,14 @@ import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empl
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
 import { RegistroVentasComponent } from './registro-ventas/registro-ventas.component';
+import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-cliente.component';
+
+
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
-import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
-import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
-import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
-import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
+//import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
+//import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
+//import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
+//import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
 import { ApplicationConfig } from '@angular/core';
 import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
 import { GestionContenidoPComponent } from './gestion-contenido-p/gestion-contenido-p.component';
@@ -31,27 +34,31 @@ export const routes: Routes = [
   { path: 'formulario-envio', component: FormularioEnvioComponent },
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
-  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-  { path: 'generar-informe-contable-show' , component: GenerarInformeContableShowComponent},
-  { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
-  { path: 'seguridad-salud' , component: SeguridadSaludComponent},
-  { path: 'capacitaciones' , component: CapacitacionesComponent},
-  { path: 'login', component: LoginComponent },
+  { path: 'generar-informe-contable', component: GenerarInformeContableComponent },
+  { path: 'generar-informe-contable', component: GenerarInformeContableComponent },
+  { path: 'generar-informe-contable-show', component: GenerarInformeContableShowComponent },
+  { path: 'lista-empleados-pagos', component: ListaEmpleadosPagosComponent },
+  { path: 'seguridad-salud', component: SeguridadSaludComponent },
+  { path: 'capacitaciones', component: CapacitacionesComponent },
   { path: 'gestion-tareas', component: GestionTareasComponent },
-  { path: 'solicitud-recursos', component: SolicitudRecursosComponent } ,
-  { path: 'generacion-reportes', component: GeneracionReportesComponent },
-  { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
-  {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+ // { path: 'solicitud-recursos', component: SolicitudRecursosComponent },
+  //{ path: 'generacion-reportes', component: GeneracionReportesComponent },
+  //{ path: 'gestion-transacciones', component: GestionTransaccionesComponent },
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
   {path: 'registro-ventas' , component: RegistroVentasComponent},
  {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
+<<<<<<< HEAD
  {path: 'gestion-contenido-p' , component:GestionContenidoPComponent},
  {path: 'gestion-contenido-editar' , component:GestionContenidoEditarComponent},
  {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent}
+=======
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+
+>>>>>>> f2a77397a8be779140bc4367672abfc3e5b31bee
  
 ];
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes, withDebugTracing())]
-  
+
 };
