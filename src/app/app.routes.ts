@@ -21,10 +21,10 @@ export const routes: Routes = [
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
   { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-    { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-    { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
-    { path: 'seguridad-salud' , component: SeguridadSaludComponent},
-    { path: 'capacitaciones' , component: CapacitacionesComponent},
+  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
+  { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
+  { path: 'seguridad-salud' , component: SeguridadSaludComponent},
+  { path: 'capacitaciones' , component: CapacitacionesComponent},
 
 
 
