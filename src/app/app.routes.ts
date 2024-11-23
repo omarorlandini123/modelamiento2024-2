@@ -38,13 +38,13 @@ export const routes: Routes = [
   { path: 'seguridad-salud', component: SeguridadSaludComponent },
   { path: 'capacitaciones', component: CapacitacionesComponent },
   { path: 'gestion-tareas', component: GestionTareasComponent },
-  { path: 'solicitud-recursos', component: SolicitudRecursosComponent },
-  { path: 'generacion-reportes', component: GeneracionReportesComponent },
-  { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
-  {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+ // { path: 'solicitud-recursos', component: SolicitudRecursosComponent },
+  //{ path: 'generacion-reportes', component: GeneracionReportesComponent },
+  //{ path: 'gestion-transacciones', component: GestionTransaccionesComponent },
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
   {path: 'registro-ventas' , component: RegistroVentasComponent},
  {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
-  {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
 
  
 ];
