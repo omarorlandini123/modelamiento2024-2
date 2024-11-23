@@ -10,13 +10,15 @@ import { GenerarInformeContableShowComponent } from './generar-informe-contable-
 import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
-
+import { RegistroVentasComponent } from './registro-ventas/registro-ventas.component';
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
 import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
 import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
 import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
 import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
 import { ApplicationConfig } from '@angular/core';
+import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
+
 
 
 export const routes: Routes = [
@@ -37,7 +39,9 @@ export const routes: Routes = [
   { path: 'solicitud-recursos', component: SolicitudRecursosComponent } ,
   { path: 'generacion-reportes', component: GeneracionReportesComponent },
   { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
-  {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent}
+  {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+  {path: 'registro-ventas' , component: RegistroVentasComponent},
+ {path: 'registro-ventas-lista', component: RegistroVentasListaComponent}
  
 ];
 
