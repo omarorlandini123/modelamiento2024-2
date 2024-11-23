@@ -25,16 +25,10 @@ import { MatDividerModule } from '@angular/material/divider';
   styleUrls: ['./solicitud-recursos.component.scss']
 })
 export class SolicitudRecursosComponent {
-<<<<<<< HEAD
-  nombreProyecto: string = '';
-
-
-=======
   // Declaración de la propiedad nombreProyecto
   nombreProyecto: string = '';
 
   // Lista de solicitudes de ejemplo
->>>>>>> 463067f (Administracion)
   solicitudes = [
     {
       recurso: 'Material',
@@ -55,26 +49,17 @@ export class SolicitudRecursosComponent {
   ];
 
   aprobarSolicitud(solicitud: any) {
-<<<<<<< HEAD
-=======
     // Lógica de aprobación
->>>>>>> 463067f (Administracion)
     solicitud.estado = 'Aprobado';
   }
 
   rechazarSolicitud(solicitud: any) {
-<<<<<<< HEAD
-=======
     // Lógica de rechazo
->>>>>>> 463067f (Administracion)
     solicitud.estado = 'Rechazado';
   }
 
   verSolicitudesAnteriores() {
-<<<<<<< HEAD
-=======
     // Lógica para ver solicitudes anteriores
->>>>>>> 463067f (Administracion)
     console.log('Ver detalles de solicitudes anteriores');
   }
 }

@@ -19,21 +19,14 @@ import { FormsModule } from '@angular/forms';
     MatDividerModule,
     FormsModule
   ],
-  templateUrl: './Monitoreo-Recursos.component.html',
-  styleUrls: ['./Monitoreo-Recursos.component.scss']
+  templateUrl: './monitoreo-recursos.component.html',
+  styleUrls: ['./monitoreo-recursos.component.scss']
 })
 export class MonitoreoRecursosComponent {
-<<<<<<< HEAD
-
-  proyectoNombre: string = 'Proyecto de Desarrollo de Software'; 
-
- 
-=======
   // Propiedad que se utilizará en el template
   proyectoNombre: string = 'Proyecto de Desarrollo de Software'; // Asigna el nombre del proyecto aquí
 
   // Lista de recursos para mostrar en el monitoreo
->>>>>>> 463067f (Administracion)
   recursos = [
     {
       tipo: 'Material',
@@ -58,29 +51,17 @@ export class MonitoreoRecursosComponent {
     }
   ];
 
-<<<<<<< HEAD
-  
-=======
   // Función para asignar un recurso
->>>>>>> 463067f (Administracion)
   asignarRecurso(recurso: any) {
     console.log('Recurso asignado:', recurso);
   }
 
-<<<<<<< HEAD
-  
-=======
   // Función para ver historial de uso de un recurso
->>>>>>> 463067f (Administracion)
   verHistorial(recurso: any) {
     console.log('Ver historial de uso para:', recurso);
   }
 
-<<<<<<< HEAD
-  
-=======
   // Nueva función para ver historial general de recursos
->>>>>>> 463067f (Administracion)
   verHistorialGeneral() {
     console.log('Ver historial general de recursos');
   }
