@@ -45,17 +45,12 @@ export const routes: Routes = [
   //{ path: 'generacion-reportes', component: GeneracionReportesComponent },
   //{ path: 'gestion-transacciones', component: GestionTransaccionesComponent },
   //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
-  {path: 'registro-ventas' , component: RegistroVentasComponent},
+ {path: 'registro-ventas' , component: RegistroVentasComponent},
  {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
-<<<<<<< HEAD
  {path: 'gestion-contenido-p' , component:GestionContenidoPComponent},
  {path: 'gestion-contenido-editar' , component:GestionContenidoEditarComponent},
  {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent}
-=======
   //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
-
->>>>>>> f2a77397a8be779140bc4367672abfc3e5b31bee
- 
 ];
 
 export const appConfig: ApplicationConfig = {
