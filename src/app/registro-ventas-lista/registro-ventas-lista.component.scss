@@ -1,0 +1,55 @@
+/* Contenedor para la tabla */
+.table-container {
+    margin: 20px auto; /* Añade espaciado arriba y abajo */
+    padding: 16px;
+    max-width: 1200px; /* Limita el ancho máximo */
+    border: 1px solid #ccc; /* Opcional: añade un borde a la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  /* Espaciado en la cabecera */
+  mat-toolbar {
+    margin-bottom: 20px; /* Espaciado entre la cabecera y la tabla */
+  }
+  
+  /* Ajusta el diseño de las celdas */
+  mat-header-cell, mat-cell {
+    text-align: center; /* Centra el texto en cada celda */
+    padding: 8px; /* Espaciado interno de las celdas */
+  }
+  
+  /* Añade un diseño a las filas */
+  mat-row {
+    border-bottom: 1px solid #ddd; /* Línea entre las filas */
+  }
+  
+  mat-row:hover {
+    background-color: #f5f5f5; /* Efecto hover en las filas */
+  }
+  
+  .botones-acciones-centradas {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 16px; /* Espaciado superior */
+  }
+  
+  .boton-estilizado {
+    background-color: #333; /* Color negro */
+    color: #fff; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 16px 31px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Sin borde adicional */
+    cursor: pointer;
+  }
+  
+  .boton-estilizado:hover {
+    background-color: #444; /* Color más claro al pasar el mouse */
+  }
+  
+  .boton-estilizado:active {
+    background-color: #555; /* Color más oscuro al hacer clic */
+  }
+ 
