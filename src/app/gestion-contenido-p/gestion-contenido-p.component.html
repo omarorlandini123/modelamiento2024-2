@@ -1,0 +1,51 @@
+<div class="container">
+    <!-- Campo de búsqueda -->
+    <mat-form-field appearance="outline" class="search-bar">
+      <mat-label>Buscar</mat-label>
+      <input matInput type="text" placeholder="Buscar contenido">
+      <button mat-icon-button matSuffix>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  
+    <!-- Lista de contenido -->
+    <div class="content-list">
+      <div class="content-item" *ngFor="let item of items">
+        <mat-checkbox class="content-checkbox"></mat-checkbox>
+        <img [src]="item.imageUrl" alt="Content Image" class="content-image">
+        <div class="content-info">
+          <h3>{{ item.title }}</h3>
+          <p><strong>Añadido:</strong> {{ item.addedDate }}</p>
+          <p><strong>Publicado:</strong> {{ item.publishDate }}</p>
+          <p><strong>Para:</strong> {{ item.platform }}</p>
+          <p><strong>Descripción:</strong> {{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="button-group">
+    <!-- Botones de acción (Nuevo Diseño FAB) -->
+    <div class="example-label"></div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-fab extended color="accent" (click)="irAAnadirContenido()">
+            <mat-icon>add</mat-icon>
+            Añadir Contenido
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab extended color="accent"(click)="eliminarSeleccionados()">
+            <mat-icon>delete</mat-icon>
+            Eliminar contenido
+          </button>
+        </div>
+        <div class="example-button-container">
+          <a mat-fab extended color="accent" (click)="irAEditarContenido()">
+            <mat-icon>edit</mat-icon>
+            Editar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
