@@ -37,7 +37,6 @@ export const routes: Routes = [
   { path: 'lista-empleados-pagos', component: ListaEmpleadosPagosComponent },
   { path: 'seguridad-salud', component: SeguridadSaludComponent },
   { path: 'capacitaciones', component: CapacitacionesComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'gestion-tareas', component: GestionTareasComponent },
   { path: 'solicitud-recursos', component: SolicitudRecursosComponent },
   { path: 'generacion-reportes', component: GeneracionReportesComponent },
