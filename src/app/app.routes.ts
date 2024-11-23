@@ -15,10 +15,10 @@ import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-clien
 
 
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component'; 
-import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
-import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
-import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
-import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
+//import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
+//import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
+//import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
+//import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
 import { ApplicationConfig } from '@angular/core';
 import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
 
