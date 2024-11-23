@@ -18,6 +18,9 @@ import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-t
 import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
 import { ApplicationConfig } from '@angular/core';
 import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
+import { GestionContenidoPComponent } from './gestion-contenido-p/gestion-contenido-p.component';
+import { GestionContenidoEditarComponent } from './gestion-contenido-editar/gestion-contenido-editar.component';
+import { GestionContenidoAnadirComponent } from './gestion-contenido-anadir/gestion-contenido-anadir.component';
 
 
 
@@ -41,7 +44,10 @@ export const routes: Routes = [
   { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
   {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
   {path: 'registro-ventas' , component: RegistroVentasComponent},
- {path: 'registro-ventas-lista', component: RegistroVentasListaComponent}
+ {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
+ {path: 'gestion-contenido-p' , component:GestionContenidoPComponent},
+ {path: 'gestion-contenido-editar' , component:GestionContenidoEditarComponent},
+ {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent}
  
 ];
 
