@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './resource-requests.component.html',
   styleUrls: ['./resource-requests.component.scss']
 })
-export class ResourceRequestsComponent {
+export class SolicitudRecursosComponent {
   // Lista de todas las solicitudes de recursos
   requests = [
     {

@@ -10,13 +10,22 @@ import { GenerarInformeContableShowComponent } from './generar-informe-contable-
 import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empleados-pagos.component';
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
+import { RegistroVentasComponent } from './registro-ventas/registro-ventas.component';
+import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-cliente.component';
+import { GestionCobrosComponent } from './gestion-cobros/gestion-cobros.component';
 
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component';
 import { ResourceRequestsComponent } from './Solicitud-Recursos/solicitud-recursos.component';
 import { GeneracionReportesComponent } from './Generacion-Reportes/generacion-reportes.component';
 import { GestionTransaccionesComponent } from './Gestion-transacciones/gestion-transacciones.component';
 import { MonitoreoRecursosComponent } from './Monitoreo-recursos/monitoreo-recursos.component';
+import { SolicitudRecursosComponent } from './Solicitud-Recursos/solicitud-recursos.component';
 import { ApplicationConfig } from '@angular/core';
+import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
+import { GestionContenidoPComponent } from './gestion-contenido-p/gestion-contenido-p.component';
+import { GestionContenidoEditarComponent } from './gestion-contenido-editar/gestion-contenido-editar.component';
+import { GestionContenidoAnadirComponent } from './gestion-contenido-anadir/gestion-contenido-anadir.component';
+import { Gestiondeinventario } from './gestiondeinventario/gestiondeinventario.component';
 
 
 export const routes: Routes = [
@@ -26,19 +35,33 @@ export const routes: Routes = [
   { path: 'formulario-envio', component: FormularioEnvioComponent },
   { path: 'confirmar-envio', component: ConfirmarEnvioComponent },
   { path: 'pago-envio', component: PagoEnvioComponent },
-  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-  { path: 'generar-informe-contable' , component: GenerarInformeContableComponent},
-  { path: 'generar-informe-contable-show' , component: GenerarInformeContableShowComponent},
-  { path: 'lista-empleados-pagos' , component: ListaEmpleadosPagosComponent},
-  { path: 'seguridad-salud' , component: SeguridadSaludComponent},
-  { path: 'capacitaciones' , component: CapacitacionesComponent},
-  { path: 'login', component: LoginComponent },
+  { path: 'generar-informe-contable', component: GenerarInformeContableComponent },
+  { path: 'generar-informe-contable', component: GenerarInformeContableComponent },
+  { path: 'generar-informe-contable-show', component: GenerarInformeContableShowComponent },
+  { path: 'lista-empleados-pagos', component: ListaEmpleadosPagosComponent },
+  { path: 'seguridad-salud', component: SeguridadSaludComponent },
+  { path: 'capacitaciones', component: CapacitacionesComponent },
   { path: 'gestion-tareas', component: GestionTareasComponent },
+<<<<<<< HEAD
   { path: 'solicitud-recursos', component: ResourceRequestsComponent } ,
   { path: 'generacion-reportes', component: GeneracionReportesComponent },
   { path: 'gestion-transacciones', component: GestionTransaccionesComponent },
   {path: 'monitoreo-recursos', component: MonitoreoRecursosComponent}
 
+=======
+ // { path: 'solicitud-recursos', component: SolicitudRecursosComponent },
+  //{ path: 'generacion-reportes', component: GeneracionReportesComponent },
+  //{ path: 'gestion-transacciones', component: GestionTransaccionesComponent },
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+ {path: 'registro-ventas' , component: RegistroVentasComponent},
+ {path: 'registro-ventas-lista', component: RegistroVentasListaComponent},
+ {path: 'gestion-contenido-p' , component:GestionContenidoPComponent},
+ {path: 'gestion-contenido-editar' , component:GestionContenidoEditarComponent},
+ {path: 'gestion-contenido-anadir' , component:GestionContenidoAnadirComponent},
+ {path: 'gestiondeinventario' , component:Gestiondeinventario},
+ {path: 'gestion-cobros',component:GestionCobrosComponent}
+  //{path: 'monitoreo-recursos', component: MonitoreoRecursosComponent},
+>>>>>>> 597c5729c26f10fd5dd319e32bd7213d9c1a35bf
 ];
 
 export const appConfig: ApplicationConfig = {

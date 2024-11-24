@@ -1,0 +1,80 @@
+<p>registro-ventas-lista works!</p>
+<div class="contenido">
+    <mat-toolbar>
+      <span>Registro de Venta</span>
+    </mat-toolbar>
+
+    <div class="table-container">
+        <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+          <!-- Columna ID -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="nombre">
+            <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="fecha">
+            <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.fecha}} </mat-cell>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="dni">
+            <mat-header-cell *matHeaderCellDef> DNI </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dni}} </mat-cell>
+          </ng-container>
+      
+        
+          <ng-container matColumnDef="telefono">
+            <mat-header-cell *matHeaderCellDef> Teléfono </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.telefono}} </mat-cell>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="direccion">
+            <mat-header-cell *matHeaderCellDef> Dirección </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.direccion}} </mat-cell>
+          </ng-container>
+      
+          
+          <ng-container matColumnDef="productos">
+            <mat-header-cell *matHeaderCellDef> Productos </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.productos}} </mat-cell>
+          </ng-container>
+      
+        
+          <ng-container matColumnDef="cantidad">
+            <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
+          </ng-container>
+      
+       
+          <ng-container matColumnDef="total">
+            <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.total}} </mat-cell>
+          </ng-container>
+      
+ 
+          <ng-container matColumnDef="observaciones">
+            <mat-header-cell *matHeaderCellDef> Observaciones </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.observaciones}} </mat-cell>
+          </ng-container>
+      
+     
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      
+        <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+      </div>
+
+      <div class="botones-acciones-centradas">
+        <button mat-flat-button class="boton-estilizado" (click)="regresar()">REGRESAR</button>
+      </div>
+      
