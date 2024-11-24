@@ -1,61 +1,65 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-solicitud-recursos',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatDividerModule,
-  ],
   templateUrl: './solicitud-recursos.component.html',
   styleUrls: ['./solicitud-recursos.component.scss']
 })
 export class SolicitudRecursosComponent {
-  nombreProyecto: string = '';
-
-
-  solicitudes = [
+  // Lista de todas las solicitudes de recursos
+  requests = [
     {
-      recurso: 'Material',
-      descripcion: 'Equipos de computo',
-      justificacion: 'Necesarios para el proyecto de desarrollo',
-      fechaSolicitud: '2024-11-10',
-      fechaNecesaria: '2024-11-20',
-      estado: 'Pendiente'
+      resource: 'Laptop',
+      quantity: '2 unidades',
+      justification: 'Requerido para nuevos empleados',
+      requestDate: '2024-11-20',
+      neededDate: '2024-11-30',
+      status: 'Pendiente'
     },
     {
-      recurso: 'Humano',
-      descripcion: 'Desarrollador Backend',
-      justificacion: 'Requerido para la integración de la API',
-      fechaSolicitud: '2024-11-12',
-      fechaNecesaria: '2024-11-30',
-      estado: 'Pendiente'
+      resource: 'Sillas de oficina',
+      quantity: '10 unidades',
+      justification: 'Actualización de mobiliario',
+      requestDate: '2024-11-15',
+      neededDate: '2024-12-01',
+      status: 'Pendiente'
+    },
+    {
+      resource: 'Servidor',
+      quantity: '1 unidad',
+      justification: 'Ampliación de infraestructura TI',
+      requestDate: '2024-11-18',
+      neededDate: '2024-12-10',
+      status: 'Aprobada'
     }
   ];
 
-  aprobarSolicitud(solicitud: any) {
-    solicitud.estado = 'Aprobado';
+  // Campo de entrada del nombre del proyecto
+  projectName: string = '';
+
+  // Lista filtrada para mostrar en la tabla
+  filteredRequests = this.requests;
+
+  // Filtrar solicitudes por el nombre del proyecto
+  filterRequests() {
+    if (this.projectName.trim()) {
+      this.filteredRequests = this.requests.filter(request =>
+        request.resource.toLowerCase().includes(this.projectName.toLowerCase())
+      );
+    } else {
+      this.filteredRequests = this.requests;
+    }
   }
 
-  rechazarSolicitud(solicitud: any) {
-    solicitud.estado = 'Rechazado';
+  // Aprobar una solicitud
+  approveRequest(request: any) {
+    request.status = 'Aprobada';
+    alert(`La solicitud de ${request.resource} ha sido aprobada.`);
   }
 
-  verSolicitudesAnteriores() {
-    console.log('Ver detalles de solicitudes anteriores');
+  // Rechazar una solicitud
+  rejectRequest(request: any) {
+    request.status = 'Rechazada';
+    alert(`La solicitud de ${request.resource} ha sido rechazada.`);
   }
 }

@@ -1,68 +1,95 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatDividerModule } from '@angular/material/divider';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-monitoreo-recursos',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatDividerModule,
-    FormsModule
-  ],
-  templateUrl: './Monitoreo-Recursos.component.html',
-  styleUrls: ['./Monitoreo-Recursos.component.scss']
+  templateUrl: './monitoreo-recursos.component.html',
+  styleUrls: ['./monitoreo-recursos.component.scss']
 })
 export class MonitoreoRecursosComponent {
+  // Campo de búsqueda para proyecto
+  proyecto: string = '';
 
-  proyectoNombre: string = 'Proyecto de Desarrollo de Software'; 
-
- 
+  // Lista de recursos
   recursos = [
     {
-      tipo: 'Material',
-      descripcion: 'Equipos de computo',
-      cantidadSolicitada: 100,
-      cantidadDisponible: 80,
+      tipo: 'Laptop',
+      descripcion: 'Laptop de alto rendimiento',
+      cantidadSolicitada: 5,
+      cantidadDisponible: 3,
       estado: 'Disponible'
     },
     {
-      tipo: 'Humano',
-      descripcion: 'Desarrollador Backend',
-      cantidadSolicitada: 1,
-      cantidadDisponible: 1,
-      estado: 'En Uso'
+      tipo: 'Sillas de oficina',
+      descripcion: 'Sillas ergonómicas para oficina',
+      cantidadSolicitada: 10,
+      cantidadDisponible: 7,
+      estado: 'Disponible'
     },
     {
-      tipo: 'Financiero',
-      descripcion: 'Presupuesto de Marketing',
-      cantidadSolicitada: 5000,
-      cantidadDisponible: 3000,
-      estado: 'Pendiente'
+      tipo: 'Proyector',
+      descripcion: 'Proyector de última generación',
+      cantidadSolicitada: 2,
+      cantidadDisponible: 0,
+      estado: 'No Disponible'
+    },
+    {
+      tipo: 'Pantallas',
+      descripcion: 'Pantallas para sala de reuniones',
+      cantidadSolicitada: 3,
+      cantidadDisponible: 1,
+      estado: 'No Disponible'
     }
   ];
 
-  
-  asignarRecurso(recurso: any) {
-    console.log('Recurso asignado:', recurso);
+  // Buscar recursos por proyecto
+  buscarProyecto() {
+    if (this.proyecto.trim()) {
+      // Filtrar recursos por nombre del proyecto o tipo (puedes adaptarlo según tu lógica)
+      this.recursos = this.recursos.filter(recurso =>
+        recurso.descripcion.toLowerCase().includes(this.proyecto.toLowerCase())
+      );
+    } else {
+      // Si no se especifica ningún proyecto, mostrar todos los recursos
+      this.resetearBusqueda();
+    }
   }
 
-  
-  verHistorial(recurso: any) {
-    console.log('Ver historial de uso para:', recurso);
+  // Resetear la búsqueda para mostrar todos los recursos
+  resetearBusqueda() {
+    this.recursos = [
+      {
+        tipo: 'Laptop',
+        descripcion: 'Laptop de alto rendimiento',
+        cantidadSolicitada: 5,
+        cantidadDisponible: 3,
+        estado: 'Disponible'
+      },
+      {
+        tipo: 'Sillas de oficina',
+        descripcion: 'Sillas ergonómicas para oficina',
+        cantidadSolicitada: 10,
+        cantidadDisponible: 7,
+        estado: 'Disponible'
+      },
+      {
+        tipo: 'Proyector',
+        descripcion: 'Proyector de última generación',
+        cantidadSolicitada: 2,
+        cantidadDisponible: 0,
+        estado: 'No Disponible'
+      },
+      {
+        tipo: 'Pantallas',
+        descripcion: 'Pantallas para sala de reuniones',
+        cantidadSolicitada: 3,
+        cantidadDisponible: 1,
+        estado: 'No Disponible'
+      }
+    ];
   }
 
-  
-  verHistorialGeneral() {
-    console.log('Ver historial general de recursos');
+  // Ver detalles de un recurso
+  verDetalles(recurso: any) {
+    alert(`Detalles del recurso:\n\nTipo: ${recurso.tipo}\nDescripción: ${recurso.descripcion}\nCantidad solicitada: ${recurso.cantidadSolicitada}\nCantidad disponible: ${recurso.cantidadDisponible}\nEstado: ${recurso.estado}`);
   }
 }

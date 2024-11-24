@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<div class="monitoreo-recursos">
+  <h1>Monitoreo de Recursos</h1>
+  <div class="search-bar">
+    <label for="proyecto">Proyecto:</label>
+    <input type="text" id="proyecto" [(ngModel)]="proyecto">
+    <button (click)="buscarProyecto()">Buscar</button>
+=======
 <div class="monitoreo-recursos-container">
   <mat-card class="header-card">
     <h2>Monitoreo de Recursos</h2>
@@ -25,8 +33,38 @@
     </div>
   </mat-card>
 
-
+  <!-- Botón para ver historial general -->
   <div class="ver-historial-general">
     <button mat-raised-button color="warn" (click)="verHistorialGeneral()">Ver Historial General</button>
+>>>>>>> 597c5729c26f10fd5dd319e32bd7213d9c1a35bf
   </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Descripción</th>
+        <th>Cantidad Solicitada</th>
+        <th>Cantidad Disponible</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recurso of recursos">
+        <td>{{ recurso.tipo }}</td>
+        <td>{{ recurso.descripcion }}</td>
+        <td>{{ recurso.cantidadSolicitada }}</td>
+        <td>{{ recurso.cantidadDisponible }}</td>
+        <td>
+          <span [ngClass]="{ disponible: recurso.estado === 'Disponible', no-disponible: recurso.estado !== 'Disponible' }">
+            {{ recurso.estado }}
+          </span>
+        </td>
+        <td>
+          <button (click)="verDetalles(recurso)">Ver Detalles de recursos</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

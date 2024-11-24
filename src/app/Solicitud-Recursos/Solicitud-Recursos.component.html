@@ -1,9 +1,10 @@
 <div class="container">
     <h1 class="title">Solicitudes de Recursos</h1>
-  
+
+    <!-- Información del Proyecto -->
     <mat-card class="project-card">
       <mat-card-header>
-        <mat-card-title>Proyecto: 
+        <mat-card-title>Proyecto:
           <mat-form-field appearance="fill" class="project-input">
             <mat-label>Nombre del Proyecto</mat-label>
             <input matInput [(ngModel)]="nombreProyecto" placeholder="Ingresa el nombre del proyecto">
@@ -11,7 +12,8 @@
         </mat-card-title>
       </mat-card-header>
     </mat-card>
-  
+
+    <!-- Lista de Solicitudes -->
     <div class="solicitudes">
       <div *ngFor="let solicitud of solicitudes; let i = index" class="solicitud-card">
         <mat-card class="request-card">
@@ -19,7 +21,7 @@
             <mat-card-title class="solicitud-title">Solicitud #{{ i + 1 }}</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-
+            <!-- Información de la Solicitud -->
             <div class="info">
               <div><strong>Recurso Solicitado:</strong> {{ solicitud.recurso }}</div>
               <div><strong>Cantidad/Descripción:</strong> {{ solicitud.descripcion }}</div>
@@ -27,9 +29,10 @@
               <div><strong>Fecha de Solicitud:</strong> {{ solicitud.fechaSolicitud }}</div>
               <div><strong>Fecha Necesaria:</strong> {{ solicitud.fechaNecesaria }}</div>
             </div>
-  
+
             <mat-divider></mat-divider>
-  
+
+            <!-- Estado de la Solicitud -->
             <div class="estado">
               <strong>Estado Actual:</strong>
               <mat-select [(ngModel)]="solicitud.estado">
@@ -38,7 +41,8 @@
                 <mat-option value="Rechazado">Rechazado</mat-option>
               </mat-select>
             </div>
-  
+
+            <!-- Botones de Aprobación/Rechazo -->
             <div class="buttons">
               <button mat-raised-button color="primary" (click)="aprobarSolicitud(solicitud)">
                 Aprobar Solicitud
@@ -51,9 +55,9 @@
         </mat-card>
       </div>
     </div>
-  
+
+    <!-- Botón para ver solicitudes anteriores -->
     <div class="previous-requests">
       <button mat-stroked-button color="accent" (click)="verSolicitudesAnteriores()">Ver Detalles de Solicitudes Anteriores</button>
     </div>
   </div>
-  

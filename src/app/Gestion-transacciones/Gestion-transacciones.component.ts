@@ -1,60 +1,79 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon'; 
 
 @Component({
   selector: 'app-gestion-transacciones',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatDividerModule,
-    MatIconModule
-  ],
   templateUrl: './gestion-transacciones.component.html',
   styleUrls: ['./gestion-transacciones.component.scss']
 })
 export class GestionTransaccionesComponent {
-  nombreProyecto: string = 'Proyecto de Desarrollo Web';
+  // Filtro de búsqueda por proyecto
+  filtroProyecto: string = '';
 
+  // Lista de transacciones
   transacciones = [
     {
-      monto: 1500,
-      categoria: 'Ingreso',
-      descripcion: 'Pago por servicio prestado',
+      monto: 5000,
+      categoria: 'Compra',
+      descripcion: 'Compra de equipos informáticos',
       fecha: '2024-11-10',
       estado: 'Pendiente'
     },
     {
-      monto: 500,
-      categoria: 'Gasto',
-      descripcion: 'Compra de materiales',
+      monto: 1500,
+      categoria: 'Pago',
+      descripcion: 'Pago a proveedor',
       fecha: '2024-11-12',
       estado: 'Pendiente'
+    },
+    {
+      monto: 10000,
+      categoria: 'Inversión',
+      descripcion: 'Inversión en nuevos proyectos',
+      fecha: '2024-11-15',
+      estado: 'Aprobada'
+    },
+    {
+      monto: 2000,
+      categoria: 'Compra',
+      descripcion: 'Compra de materiales de oficina',
+      fecha: '2024-11-18',
+      estado: 'Rechazada'
     }
   ];
 
-  aprobarTransaccion(transaccion: any) {
-    transaccion.estado = 'Aprobado';
-    alert(`Transacción #${this.transacciones.indexOf(transaccion) + 1} aprobada.`);
+  // Lista de transacciones filtradas por el proyecto
+  transaccionesFiltradas = this.transacciones;
+
+  // Filtrar las transacciones por el nombre del proyecto
+  filtrarPorProyecto() {
+    if (this.filtroProyecto.trim()) {
+      this.transaccionesFiltradas = this.transacciones.filter(transaccion =>
+        transaccion.descripcion.toLowerCase().includes(this.filtroProyecto.toLowerCase())
+      );
+    } else {
+      // Si no hay filtro, mostrar todas las transacciones
+      this.transaccionesFiltradas = this.transacciones;
+    }
   }
 
-  rechazarTransaccion(transaccion: any) {
-    transaccion.estado = 'Rechazado';
-    alert(`Transacción #${this.transacciones.indexOf(transaccion) + 1} rechazada.`);
+  // Ver los detalles de una transacción
+  verDetalles(transaccion: any) {
+    alert(`Detalles de la transacción:\n\nMonto: ${transaccion.monto}\nCategoría: ${transaccion.categoria}\nDescripción: ${transaccion.descripcion}\nFecha: ${transaccion.fecha}\nEstado: ${transaccion.estado}`);
   }
 
-  verTransaccionesAnteriores() {
-    alert('Mostrando detalles de transacciones anteriores.');
+  // Aprobar una transacción
+  aprobarSolicitud(transaccion: any) {
+    if (transaccion.estado !== 'Aprobada') {
+      transaccion.estado = 'Aprobada';
+      alert(`La transacción de ${transaccion.descripcion} ha sido aprobada.`);
+    }
+  }
+
+  // Rechazar una transacción
+  rechazarSolicitud(transaccion: any) {
+    if (transaccion.estado !== 'Rechazada') {
+      transaccion.estado = 'Rechazada';
+      alert(`La transacción de ${transaccion.descripcion} ha sido rechazada.`);
+    }
   }
 }

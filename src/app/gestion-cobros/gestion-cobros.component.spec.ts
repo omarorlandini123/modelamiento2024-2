@@ -55,4 +55,15 @@ describe('GestionCobrosComponent', () => {
     component.cobrar(cobroMock);
     expect(console.log).toHaveBeenCalledWith('Procesando cobro:', cobroMock);
   });
+  it('should update filtros when ngModel changes', () => {
+    const inputElement = fixture.nativeElement.querySelector('#nombre'); // Selecciona el campo por su id
+    inputElement.value = 'Nuevo Nombre'; // Asigna un valor al input
+    inputElement.dispatchEvent(new Event('input')); // Dispara el evento de entrada
+  
+    fixture.detectChanges(); // Detecta cambios en el DOM
+  
+    // Verifica que el valor del filtro se haya actualizado correctamente
+    expect(component.filtros.nombre).toBe('Nuevo Nombre');
+  });
+  
 });
