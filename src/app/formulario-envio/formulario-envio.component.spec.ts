@@ -1,23 +1,18 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { FormularioEnvioComponent } from './formulario-envio.component';
+@Component({
+  selector: 'app-formulario-envio',
+  templateUrl: './formulario-envio.component.html',
+  styleUrls: ['./formulario-envio.component.scss']
+})
+export class FormularioEnvioComponent {
+  // Controlamos el paso actual del formulario
+  step: number = 1; // 1 = Formulario de Envío, 2 = Formulario de Pago
 
-describe('FormularioEnvioComponent', () => {
-  let component: FormularioEnvioComponent;
-  let fixture: ComponentFixture<FormularioEnvioComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [FormularioEnvioComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(FormularioEnvioComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  // Función que cambia al siguiente paso (Formulario de Pago)
+  nextStep() {
+    if (this.step === 1) {
+      this.step = 2; // Cambia al formulario de pago
+    }
+  }
+}
