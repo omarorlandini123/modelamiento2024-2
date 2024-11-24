@@ -1,85 +1,39 @@
-<div class="gestion-transacciones-container">
-    <mat-card class="header-card">
-      <mat-card-header>
-        <h2>Gestión de Transacciones Financieras</h2>
-        <mat-divider></mat-divider>
-      </mat-card-header>
-  
-      <mat-card-content>
-<<<<<<< HEAD
-=======
-        <!-- Información del proyecto -->
->>>>>>> 463067f (Administracion)
-        <div class="proyecto-info">
-          <strong>Proyecto:</strong> {{ nombreProyecto }}
-        </div>
-      </mat-card-content>
-    </mat-card>
-  
-<<<<<<< HEAD
-
-=======
-    <!-- Listado de transacciones -->
->>>>>>> 463067f (Administracion)
-    <div *ngFor="let transaccion of transacciones; let i = index" class="transaccion-card">
-      <mat-card class="transaccion-card-body">
-        <mat-card-header>
-          <div class="transaccion-header">
-<<<<<<< HEAD
-            <mat-icon>attach_money</mat-icon> 
-=======
-            <mat-icon>attach_money</mat-icon> <!-- Icono de dinero -->
->>>>>>> 463067f (Administracion)
-            <h3>Transacción #{{ i + 1 }}</h3>
-          </div>
-        </mat-card-header>
-  
-        <mat-card-content>
-          <div class="transaccion-details">
-            <div><strong>Monto:</strong> ${{ transaccion.monto }}</div>
-  
-            <div>
-              <strong>Categoría:</strong>
-              <mat-select [(value)]="transaccion.categoria" class="dropdown">
-                <mat-option value="Ingreso">Ingreso</mat-option>
-                <mat-option value="Gasto">Gasto</mat-option>
-              </mat-select>
-            </div>
-  
-            <div><strong>Descripción:</strong> {{ transaccion.descripcion }}</div>
-  
-            <div><strong>Fecha:</strong> {{ transaccion.fecha | date }}</div>
-  
-            <div>
-              <strong>Estado:</strong>
-              <mat-select [(value)]="transaccion.estado" class="dropdown">
-                <mat-option value="Pendiente">Pendiente</mat-option>
-                <mat-option value="Aprobado">Aprobado</mat-option>
-                <mat-option value="Rechazado">Rechazado</mat-option>
-              </mat-select>
-            </div>
-          </div>
-  
-          <div class="transaccion-actions">
-            <button mat-raised-button color="primary" (click)="aprobarTransaccion(transaccion)">
-              <mat-icon>check_circle</mat-icon> Aprobar
-            </button>
-            <button mat-raised-button color="warn" (click)="rechazarTransaccion(transaccion)">
-              <mat-icon>cancel</mat-icon> Rechazar
-            </button>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  
-<<<<<<< HEAD
-=======
-    <!-- Botón para ver transacciones anteriores -->
->>>>>>> 463067f (Administracion)
-    <div class="ver-detalles">
-      <button mat-raised-button color="accent" (click)="verTransaccionesAnteriores()">
-        <mat-icon>history</mat-icon> Ver Detalles de Transacciones Anteriores
-      </button>
-    </div>
+<div class="transacciones-container">
+  <h1>Gestión de Transacciones Financieras</h1>
+  <div class="filtros">
+    <label for="proyecto">Proyecto:</label>
+    <input type="text" id="proyecto" [(ngModel)]="filtroProyecto" placeholder="Buscar proyecto" />
+    <button (click)="filtrarPorProyecto()">Buscar</button>
   </div>
-  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Monto</th>
+        <th>Categoría</th>
+        <th>Descripción</th>
+        <th>Fecha de la Transacción</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaccion of transaccionesFiltradas">
+        <td>{{ transaccion.monto | currency }}</td>
+        <td>{{ transaccion.categoria }}</td>
+        <td>{{ transaccion.descripcion }}</td>
+        <td>{{ transaccion.fecha }}</td>
+        <td>{{ transaccion.estado }}</td>
+        <td>
+          <button (click)="verDetalles(transaccion)">Ver Detalles</button>
+          <button (click)="aprobarSolicitud(transaccion)" [disabled]="transaccion.estado === 'Aprobada'">
+            Aprobar Solicitud
+          </button>
+          <button (click)="rechazarSolicitud(transaccion)" [disabled]="transaccion.estado === 'Rechazada'">
+            Rechazar Solicitud
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,94 +1,82 @@
-.gestion-transacciones-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-  
-    .header-card {
-      background-color: #f5f5f5;
-      margin-bottom: 30px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-  
-    h2 {
-      text-align: center;
-      color: #3f51b5;
-      font-size: 28px;
-      font-weight: 500;
-      margin: 10px 0;
-    }
-  
-    .proyecto-info {
-      font-size: 18px;
+.transacciones-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .filtros {
+    margin-bottom: 20px;
+
+    label {
+      margin-right: 10px;
       font-weight: bold;
-      color: #3f51b5;
-      margin-bottom: 20px;
     }
-  
-    .transaccion-card-body {
-      background-color: #fff;
-      margin-bottom: 15px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    input {
+      padding: 5px;
+      width: 200px;
     }
-  
-    .transaccion-header {
-      display: flex;
-      align-items: center;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-  
-      mat-icon {
-        margin-right: 10px;
-        color: #3f51b5;
-      }
-    }
-  
-    .transaccion-details {
-      margin-bottom: 20px;
-      font-size: 16px;
-      color: #666;
-  
-      div {
-        margin-bottom: 12px;
-      }
-  
-      .dropdown {
-        width: 100%;
-      }
-    }
-  
-    .transaccion-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: space-between;
-    }
-  
+
     button {
-      width: 48%;
-      font-weight: 500;
-      font-size: 14px;
-    }
-  
-    .ver-detalles {
-      text-align: center;
-      margin-top: 30px;
-  
-      button {
-        font-weight: 500;
-        font-size: 16px;
-        padding: 12px 30px;
-        display: inline-flex;
-        align-items: center;
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
       }
-    }
-  
-    mat-card {
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
   }
-  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: #007bff;
+        color: white;
+        margin-right: 5px;
+      }
+
+      &:nth-child(2) {
+        background-color: #28a745;
+        color: white;
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

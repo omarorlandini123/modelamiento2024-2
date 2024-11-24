@@ -1,172 +1,87 @@
-.gestion-tareas {
-  display: flex;
-  justify-content: center;
+.task-management {
+  font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f0f4f8;
-  min-height: 100vh;
-  
-  /* Contenedor principal */
-  .contenedor-principal {
-    width: 100%;
-    max-width: 900px;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 30px;
-    transition: all 0.3s ease;
+  max-width: 1200px;
+  margin: auto;
 
-    &:hover {
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-
-      h1 {
-        font-size: 28px;
-        color: #3f51b5;
-        font-weight: 600;
-        margin-bottom: 10px;
-        transition: color 0.3s ease;
-      }
-
-      p {
-        font-size: 18px;
-        color: #757575;
-        line-height: 1.5;
-        margin-bottom: 10px;
-      }
-    }
-
-    /* Sección de Información */
-    .seccion {
-      margin-top: 30px;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 20px;
-
-      h2 {
-        font-size: 20px;
-        color: #616161;
-        margin-bottom: 15px;
-        font-weight: 500;
-        padding-bottom: 5px;
-        border-bottom: 2px solid #616161;
-      }
-
-      .info-tarea {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-
-        div {
-          p {
-            margin: 10px 0;
-            color: #424242;
-            font-weight: 400;
-          }
-        }
-      }
-
-      /* Barra de Progreso */
-      .progreso {
-        margin-top: 20px;
-
-        mat-progress-bar {
-          margin-top: 10px;
-        }
-      }
-    }
-
-    /* Estilo de los botones */
-    .acciones {
-      display: flex;
-      justify-content: space-around;
-      gap: 15px;
-      margin-top: 30px;
-
-      button {
-        width: 150px;
-        padding: 12px 0;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-
-        &:first-child {
-          background-color: #4caf50;
-          color: white;
-
-          &:hover {
-            background-color: #45a049;
-          }
-        }
-
-        &:nth-child(2) {
-          background-color: #ff9800;
-          color: white;
-
-          &:hover {
-            background-color: #fb8c00;
-          }
-        }
-
-        &:last-child {
-          background-color: #f44336;
-          color: white;
-
-          &:hover {
-            background-color: #e53935;
-          }
-        }
-      }
-    }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  /* Estilo de los campos de texto */
-  mat-form-field {
-    width: 100%;
+  .task-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     margin-bottom: 20px;
 
-    textarea {
-      border-radius: 8px;
-      padding: 12px;
-      font-size: 14px;
-      color: #424242;
-      background-color: #fafafa;
-      border: 1px solid #e0e0e0;
-      transition: border-color 0.3s ease;
+    .form-group {
+      display: flex;
+      flex-direction: column;
 
-      &:focus {
-        border-color: #3f51b5;
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
       }
     }
 
-    mat-label {
-      font-weight: 500;
-      color: #616161;
+    .generate-report-btn {
+      grid-column: span 2;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
     }
 
-    mat-select, mat-input {
-      border-radius: 8px;
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .action-btn {
+      padding: 5px 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #218838;
+      }
+
+      & + .action-btn {
+        margin-left: 5px;
+        background-color: #ffc107;
+
+        &:hover {
+          background-color: #e0a800;
+        }
+      }
     }
   }
 }
-
-/* Efectos de sombra */
-@keyframes shadowPulse {
-  0% {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  50% {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-}
-

@@ -1,81 +1,68 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-generacion-reportes',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
   templateUrl: './generacion-reportes.component.html',
   styleUrls: ['./generacion-reportes.component.scss']
 })
 export class GeneracionReportesComponent {
-  // Datos de ejemplo para proyectos
-  proyectos = [
-    { id: 1, nombre: 'Proyecto A' },
-    { id: 2, nombre: 'Proyecto B' },
-    { id: 3, nombre: 'Proyecto C' }
-  ];
+  // Modelos de datos para los inputs
+  proyecto: string = '';
+  fechaReporte: string = '';
+  tipoReporte: string = '';
+  estado: string = '';
 
-  // Modelos de datos de selección
-  selectedProyecto: any;
-  selectedTipoReporte: string = 'Progreso de Tareas';
-  selectedEstado: string = 'Todos';
-  fechaInicio: Date | null = null;
-  fechaFin: Date | null = null;
+  // Datos para los selects
+  tiposReporte: string[] = ['Progreso', 'Financiero', 'General'];
+  estados: string[] = ['Pendiente', 'Aprobado', 'Rechazado'];
 
-  // Datos de ejemplo para reportes generados
-  reporteGenerado: boolean = false;
-  progresoTareasVistaPrevia: string = 'Vista previa del progreso de las tareas aquí.';
-  informeFinancieroVistaPrevia: string = 'Vista previa de las transacciones y balance aquí.';
+  // Variables para los informes generados
+  informeProgreso: string | null = null;
+  informeFinanciero: string | null = null;
 
-  constructor() {}
+  // Método para generar el reporte
+  generarReporte() {
+    if (!this.proyecto || !this.fechaReporte || !this.tipoReporte || !this.estado) {
+      alert('Por favor, complete todos los campos para generar el reporte.');
+      return;
+    }
 
-  // Función para generar el reporte
-  generarReporte(): void {
-    this.reporteGenerado = true;
-
-    if (this.selectedTipoReporte === 'Progreso de Tareas') {
-      this.progresoTareasVistaPrevia = 'Datos reales del progreso de las tareas generadas.';
-    } else if (this.selectedTipoReporte === 'Finanzas') {
-      this.informeFinancieroVistaPrevia = 'Datos reales del informe financiero generados.';
+    if (this.tipoReporte === 'Progreso') {
+      this.informeProgreso = `Informe de Progreso para el Proyecto: ${this.proyecto} con fecha: ${this.fechaReporte} y estado: ${this.estado}.`;
+      this.informeFinanciero = null;
+    } else if (this.tipoReporte === 'Financiero') {
+      this.informeFinanciero = `Informe Financiero para el Proyecto: ${this.proyecto} con fecha: ${this.fechaReporte} y estado: ${this.estado}.`;
+      this.informeProgreso = null;
+    } else {
+      this.informeProgreso = `Informe General para el Proyecto: ${this.proyecto} con fecha: ${this.fechaReporte} y estado: ${this.estado}.`;
+      this.informeFinanciero = null;
     }
   }
 
-  // Función para exportar el reporte a Excel (solo ejemplo)
-  exportarAExcel(): void {
-    console.log('Exportando reporte a Excel...');
-    // Aquí se puede integrar una lógica para generar un archivo Excel con los datos del reporte
+  // Método para descargar el reporte en formato PDF
+  descargarPDF() {
+    const reporte = this.tipoReporte === 'Progreso' ? this.informeProgreso : this.informeFinanciero;
+    if (reporte) {
+      // Simulación de descarga de PDF (requiere librería como jsPDF en un caso real)
+      alert(`Descargando PDF del reporte: ${reporte}`);
+    } else {
+      alert('Por favor, genere un reporte antes de intentar descargarlo.');
+    }
   }
 
-  // Función para imprimir el reporte (solo ejemplo)
-  imprimirReporte(): void {
-    console.log('Imprimiendo reporte...');
-    window.print();
-  }
-
-  // Función para ver los detalles del proyecto
-  verDetallesProyecto(): void {
-    console.log('Mostrando detalles del proyecto...');
-    // Aquí puedes navegar a una página de detalles del proyecto o mostrar más información
+  // Método para imprimir el reporte
+  imprimir() {
+    const reporte = this.tipoReporte === 'Progreso' ? this.informeProgreso : this.informeFinanciero;
+    if (reporte) {
+      const ventanaImpresion = window.open('', '', 'height=800,width=600');
+      ventanaImpresion?.document.write('<html><head><title>Imprimir Reporte</title></head><body>');
+      ventanaImpresion?.document.write(`<h1>${this.tipoReporte} Reporte</h1>`);
+      ventanaImpresion?.document.write(`<p>${reporte}</p>`);
+      ventanaImpresion?.document.write('</body></html>');
+      ventanaImpresion?.document.close();
+      ventanaImpresion?.print();
+    } else {
+      alert('Por favor, genere un reporte antes de intentar imprimirlo.');
+    }
   }
 }

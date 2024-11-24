@@ -1,60 +1,64 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-gestion-tareas',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatProgressBarModule,
-    MatDividerModule,
-  ],
   templateUrl: './gestion-tareas.component.html',
   styleUrls: ['./gestion-tareas.component.scss']
 })
 export class GestionTareasComponent {
-  tarea = {
-    proyecto: 'Sistema de Inventarios',
-    nombre: 'Desarrollo de módulo de reportes',
-    fechaInicio: '2024-11-01',
-    fechaEntrega: '2024-11-30',
-    estado: 'En Progreso',
-    progreso: 45,
-    tiempoConsumido: '12:30',
-    recursos: ['Base de datos', 'Diseño de interfaz'],
-    obstaculos: '',
-    comentarios: ''
-  };
+  // Modelo para el formulario
+  project: string = '';
+  task: string = '';
+  startDate: string = '';
+  endDate: string = '';
+  status: string = 'disabled';
 
-  estados = ['No Iniciado', 'En Progreso', 'Completado'];
+  // Lista de tareas con información inicial
+  tasks = [
+    {
+      progreso: '50%',
+      tiempoConsumido: '2 horas',
+      recursosUtilizados: 'Material A',
+      obstaculos: 'Ninguno',
+      comentarios: 'Avance según lo esperado',
+      acciones: ['Ver Detalles', 'Reasignar Tarea']
+    },
+    {
+      progreso: '75%',
+      tiempoConsumido: '3 horas',
+      recursosUtilizados: 'Material B',
+      obstaculos: 'Falta de personal',
+      comentarios: 'Demora por falta de recursos',
+      acciones: ['Ver Detalles', 'Reasignar Tarea']
+    }
+  ];
 
-  actualizarEstado(estado: string) {
-    console.log('Estado actualizado a:', estado);
-  }
-
-  reasignarTarea() {
-    console.log('Reasignar Tarea');
-  }
-
-  ajustarPrioridad() {
-    console.log('Ajustar Prioridad');
-  }
-
+  // Método para generar informe de progreso
   generarInforme() {
-    console.log('Generar Informe');
+    alert(`Informe de Progreso:
+      Proyecto: ${this.project}
+      Tarea: ${this.task}
+      Fecha de Inicio: ${this.startDate}
+      Fecha de Entrega: ${this.endDate}
+      Estado: ${this.status}`);
+  }
+
+  // Método para ver los detalles de una tarea
+  verDetalles(tarea: any) {
+    alert(`Detalles de la Tarea:
+      Progreso: ${tarea.progreso}
+      Tiempo Consumido: ${tarea.tiempoConsumido}
+      Recursos Utilizados: ${tarea.recursosUtilizados}
+      Obstáculos: ${tarea.obstaculos}
+      Comentarios: ${tarea.comentarios}`);
+  }
+
+  // Método para reasignar una tarea
+  reasignarTarea(tarea: any) {
+    const nuevaTarea = prompt('Ingrese el nuevo nombre para la tarea:', tarea.progreso);
+    if (nuevaTarea !== null && nuevaTarea !== '') {
+      tarea.progreso = nuevaTarea;
+      alert(`La tarea ha sido reasignada con éxito a: ${nuevaTarea}`);
+    }
   }
 }

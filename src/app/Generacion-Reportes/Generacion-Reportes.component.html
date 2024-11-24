@@ -1,76 +1,42 @@
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>Generación de Reportes</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form (ngSubmit)="generarReporte()">
-        <mat-form-field appearance="fill">
-          <mat-label>Seleccionar Proyecto</mat-label>
-          <mat-select [(ngModel)]="selectedProyecto" name="proyecto">
-            <mat-option *ngFor="let proyecto of proyectos" [value]="proyecto">
-              {{ proyecto.nombre }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-  
-        <!-- Fecha de Reporte -->
-        <mat-form-field appearance="fill">
-          <mat-label>Fecha de Reporte</mat-label>
-          <mat-datepicker #pickerStart></mat-datepicker>
-          <input matInput [matDatepicker]="pickerStart" [(ngModel)]="fechaInicio" name="fechaInicio" placeholder="Desde">
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>Fecha de Reporte</mat-label>
-          <mat-datepicker #pickerEnd></mat-datepicker>
-          <input matInput [matDatepicker]="pickerEnd" [(ngModel)]="fechaFin" name="fechaFin" placeholder="Hasta">
-        </mat-form-field>
-  
-        <!-- Tipo de Reporte -->
-        <mat-form-field appearance="fill">
-          <mat-label>Tipo de Reporte</mat-label>
-          <mat-select [(ngModel)]="selectedTipoReporte" name="tipoReporte">
-            <mat-option value="Progreso de Tareas">Progreso de Tareas</mat-option>
-            <mat-option value="Finanzas">Finanzas</mat-option>
-          </mat-select>
-        </mat-form-field>
-  
-        <!-- Estado -->
-        <mat-form-field appearance="fill">
-          <mat-label>Estado</mat-label>
-          <mat-select [(ngModel)]="selectedEstado" name="estado">
-            <mat-option value="Todos">Todos</mat-option>
-            <mat-option value="Pendientes">Pendientes</mat-option>
-            <mat-option value="Completados">Completados</mat-option>
-          </mat-select>
-        </mat-form-field>
-  
-        <!-- Botón para generar el reporte -->
-        <button mat-raised-button color="primary" type="submit">Generar Reporte</button>
-      </form>
-  
-      <!-- Reporte generado y vista previa -->
-      <div *ngIf="reporteGenerado">
-        <h3>Reporte Generado</h3>
-        <mat-card>
-          <mat-card-title>Informe de Progreso</mat-card-title>
-          <mat-card-content>
-            <p>{{ progresoTareasVistaPrevia }}</p>
-          </mat-card-content>
-        </mat-card>
-  
-        <mat-card>
-          <mat-card-title>Informe Financiero</mat-card-title>
-          <mat-card-content>
-            <p>{{ informeFinancieroVistaPrevia }}</p>
-          </mat-card-content>
-        </mat-card>
-  
-        <!-- Botones de acciones -->
-        <button mat-raised-button color="accent" (click)="exportarAExcel()">Exportar a Excel</button>
-        <button mat-raised-button color="warn" (click)="imprimirReporte()">Imprimir</button>
-        <button mat-raised-button (click)="verDetallesProyecto()">Ver Detalles del Proyecto</button>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  
+<div class="generacion-reportes">
+  <h1>Generación de Reportes</h1>
+
+  <div class="form-group">
+    <label for="proyecto">Proyecto:</label>
+    <input type="text" id="proyecto" [(ngModel)]="proyecto">
+  </div>
+
+  <div class="form-group">
+    <label for="fechaReporte">Fecha de Reporte:</label>
+    <input type="date" id="fechaReporte" [(ngModel)]="fechaReporte">
+  </div>
+
+  <div class="form-group">
+    <label for="tipoReporte">Tipo de Reporte:</label>
+    <select id="tipoReporte" [(ngModel)]="tipoReporte">
+      <option value="" disabled selected>Seleccionar tipo</option>
+      <option *ngFor="let tipo of tiposReporte" [value]="tipo">{{ tipo }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="estado">Estado:</label>
+    <select id="estado" [(ngModel)]="estado">
+      <option value="" disabled selected>Seleccionar estado</option>
+      <option *ngFor="let estado of estados" [value]="estado">{{ estado }}</option>
+    </select>
+  </div>
+
+  <div class="buttons">
+    <button (click)="generarReporte()">Generar Reporte</button>
+    <button (click)="descargarPDF()">Descargar PDF</button>
+    <button (click)="imprimir()">Imprimir</button>
+  </div>
+
+  <div class="reportes">
+    <h2>Informe de Progreso:</h2>
+    <p *ngIf="informeProgreso">{{ informeProgreso }}</p>
+    <h2>Informe Financiero:</h2>
+    <p *ngIf="informeFinanciero">{{ informeFinanciero }}</p>
+  </div>
+</div>
