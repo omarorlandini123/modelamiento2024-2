@@ -11,20 +11,20 @@ import { ListaEmpleadosPagosComponent } from './lista-empleados-pagos/lista-empl
 import { SeguridadSaludComponent } from './CapacitacionSeguridad-salud/seguridad-salud.component';
 import { CapacitacionesComponent } from './capacitaciones/capacitaciones.component';
 import { RegistroVentasComponent } from './registro-ventas/registro-ventas.component';
-import { DetalleClienteComponent } from './cliente/detalle-cliente/detalle-cliente.component';
 import { GestionCobrosComponent } from './gestion-cobros/gestion-cobros.component';
 
 import { GestionTareasComponent } from './gestion-tareas/gestion-tareas.component';
-import { GeneracionReportesComponent } from './generacion-Reportes/generacion-Reportes.component';
-import { GestionTransaccionesComponent } from './gestion-transacciones/gestion-transacciones.component';
-import { MonitoreoRecursosComponent } from './monitoreo-recursos/monitoreo-recursos.component';
-import { SolicitudRecursosComponent } from './solicitud-recursos/solicitud-recursos.component';
+
 import { ApplicationConfig } from '@angular/core';
 import { RegistroVentasListaComponent } from './registro-ventas-lista/registro-ventas-lista.component';
 import { GestionContenidoPComponent } from './gestion-contenido-p/gestion-contenido-p.component';
 import { GestionContenidoEditarComponent } from './gestion-contenido-editar/gestion-contenido-editar.component';
 import { GestionContenidoAnadirComponent } from './gestion-contenido-anadir/gestion-contenido-anadir.component';
 import { Gestiondeinventario } from './gestiondeinventario/gestiondeinventario.component';
+import { SolicitudRecursosComponent } from './Solicitud-Recursos/Solicitud-Recursos.component';
+import { GeneracionReportesComponent } from './Generacion-Reportes/Generacion-Reportes.component';
+import { GestionTransaccionesComponent } from './Gestion-transacciones/Gestion-transacciones.component';
+import { MonitoreoRecursosComponent } from './Monitoreo-recursos/Monitoreo-Recursos.component';
 
 
 export const routes: Routes = [
