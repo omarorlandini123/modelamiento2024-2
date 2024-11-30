@@ -25,6 +25,8 @@ import { SolicitudRecursosComponent } from './Solicitud-Recursos/Solicitud-Recur
 import { GeneracionReportesComponent } from './Generacion-Reportes/Generacion-Reportes.component';
 import { GestionTransaccionesComponent } from './Gestion-transacciones/Gestion-transacciones.component';
 import { MonitoreoRecursosComponent } from './Monitoreo-recursos/Monitoreo-Recursos.component';
+import { RegistroIncidenteComponent } from './registro-incidente/registro-incidente.component';
+import { IncidenteComponent } from './incidente/incidente.component';
 
 
 export const routes: Routes = [
@@ -51,7 +53,9 @@ export const routes: Routes = [
   { path: 'gestion-contenido-editar', component: GestionContenidoEditarComponent },
   { path: 'gestion-contenido-anadir', component: GestionContenidoAnadirComponent },
   { path: 'gestiondeinventario', component: Gestiondeinventario },
-  { path: 'gestion-cobros', component: GestionCobrosComponent }
+  { path: 'gestion-cobros', component: GestionCobrosComponent },
+  { path: 'registro-incidente', component: RegistroIncidenteComponent },
+  { path: 'incidente', component: IncidenteComponent },
 
 ];
 

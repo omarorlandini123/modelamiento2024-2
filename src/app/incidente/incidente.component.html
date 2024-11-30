@@ -1,0 +1,57 @@
+<div class="container">
+    <!-- Barra superior -->
+    <div class="toolbar">
+      <button class="icon-button">
+        <span class="icon">☰</span>
+      </button>
+      <span class="title">Registrar incidentes</span>
+      <div class="spacer"></div>
+      <button class="icon-button">
+        <span class="icon">👤</span>
+      </button>
+    </div>
+  
+    <!-- Contenedor principal -->
+    <div class="form-container">
+      <!-- Sección izquierda -->
+      <div class="left-section">
+        <div class="form-group">
+          <label for="incident">Ingrese el Incidente</label>
+          <input type="text" id="incident" />
+        </div>
+  
+        <div class="form-group">
+          <label for="date">Ingrese la fecha</label>
+          <input type="date" id="date" />
+        </div>
+  
+        <div class="form-group">
+          <label for="time">Ingrese la hora</label>
+          <input type="time" id="time" />
+        </div>
+  
+        <div class="form-group">
+          <label for="client-code">Código de Cliente</label>
+          <input type="text" id="client-code" />
+        </div>
+  
+        <button class="btn">Continuar</button>
+      </div>
+  
+      <!-- Divisor -->
+      <div class="divider"></div>
+  
+      <!-- Sección derecha -->
+      <div class="right-section">
+        <div class="form-group">
+            <button class="detail-button">
+                <span class="icon">✏️</span> Ingrese Detalle del Incidente
+              </button>
+          <textarea id="details" rows="10"></textarea>
+        </div>
+  
+        <button class="btn">Enviar</button>
+      </div>
+    </div>
+  </div>
+  

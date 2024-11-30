@@ -1,0 +1,123 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8ebf8;
+    color: #5e387a;
+  }
+  
+  /* Barra superior */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #f8ebf8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #5e387a;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Contenedor del formulario */
+  .form-container {
+    display: flex;
+    flex: 1;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  /* Secciones del formulario */
+  .left-section,
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .divider {
+    width: 1px;
+    background-color: #e0e0e0;
+  }
+  
+  /* Estilo de los campos de formulario */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Botones */
+  .btn {
+    background-color: #5e387a;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #4a2c63;
+  }
+  /* Botón para "Ingrese Detalle del Incidente" */
+.detail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: #a77fc4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .detail-button:hover {
+    background-color: #a77fc4;
+  }
+  
+  .detail-button .icon {
+    font-size: 20px;
+  }
+  
